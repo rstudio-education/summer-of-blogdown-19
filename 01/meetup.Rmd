@@ -1,0 +1,235 @@
+---
+title: "Summer of Blogdown"
+subtitle: "Day 01"
+author: Alison Hill
+output:
+  xaringan::moon_reader:
+    css: ["default", "../assets/my-theme.css", "../assets/my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "https://platform.twitter.com/widgets.js"
+    includes:
+      in_header: header.html  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
+  comment = NA, dpi = 300, fig.align = "center", out.width = "80%", cache = FALSE)
+```
+
+class: title-slide, top, left
+background-image: url(../assets/scott-webb-125443-unsplash.jpg)
+background-size: cover
+
+
+# `r rmarkdown::metadata$title`- `r rmarkdown::metadata$subtitle`
+
+### `r rmarkdown::metadata$author`
+
+.footnote[
+<img src="../assets/RStudio-Logo-White.png" alt="rstudio" style="float:left;width:150px;"/>
+]
+
+---
+name: hello
+class: inverse, right, middle
+
+
+<img style="border-radius: 50%;" src="https://github.com/apreshill.png" width="150px"/>
+
+# Find me at...
+
+[`r icon::fa("twitter")` @apreshill](http://twitter.com/apreshill)  
+[`r icon::fa("github")` @apreshill](http://github.com/apreshill)  
+[`r icon::fa("link")` alison.rbind.io](https://alison.rbind.io)  
+[`r icon::fa("paper-plane")` alison@rstudio.com](mailto:alison@rstudio.com)
+
+
+---
+name: blogdown
+class: inverse, middle, center
+
+# What is blogdown?
+
+---
+template: blogdown
+
+```{r out.width="25%", echo = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/blogdown.png")
+```
+
+
+---
+template: blogdown
+
+--
+
+An <i class="fab fa-r-project"></i> package...
+
+--
+
+that lets you create websites in 
+
+<img src="../assets/RStudio-Logo-White.png" width = "15%">
+
+???
+
+So what is blogdown?
+
+It is an R package... can I get a show of hands for everyone here who uses R? OK keep them up...
+
+That lets you create websites in RStudio...can I get all of you R users to keep your hand up if you use RStudio, so lower your hand if you don't use RStudio
+
+Perfect, thanks! So this is one of the first perks of blogdown, which is that you can build a website in the RStudio IDE using tools you are familiar with, and you won't need very much else to start.
+
+---
+
+
+![](../assets/hugo-themes.gif)
+
+
+??? 
+
+The package helps you to use a static site generator named Hugo. If you didn't understand much of the last sentence I said, that is OK! The main thing you'll want to know is that Hugo gives you over 100 themes to choose from, so you can create a custom-looking website, in the same way that Wordpress offers website themes.
+
+One difference here is that you own your content, and the entire pipeline for creating it, from start to finish, which I think is a huge benefit to users. You control what, you control when, you control how.
+
+
+---
+class: center, middle
+
+```{r out.width="90%", echo = FALSE}
+knitr::include_graphics("../assets/bonus.jpg")
+```
+
+--
+
+
+# .shout[You can use R Markdown!]
+
+
+
+???
+
+And a bonus is that because blogdown is built on top of R Markdown, you can include code and output in your website content.
+
+This means you can include R code, but also Python, Julia, C++, any language engine supported in R Markdown.
+
+This makes blogdown ideal for data scientists.
+
+So what does a blogdown site look like?
+
+---
+background-image: url(../assets/amber.png)
+background-size: contain
+
+---
+background-image: url(../assets/earo.png)
+background-size: contain
+
+---
+background-image: url(../assets/alison.png)
+background-size: contain
+  
+---
+background-image: url(../assets/emi-showcase.gif)
+background-size: cover
+
+
+
+---
+class: inverse, middle
+
+# What does it actually *do*?
+
+.left-column[
+
+```{r out.width = "50%", echo = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/blogdown.png")
+```
+
+]
+
+--
+
+.right-column[
+
+```{r eval = FALSE}
+install_hugo()
+
+new_site()
+
+new_content()
+
+serve_site()
+```
+
+
+]
+
+--
+
+.footnote[*not 100% accurate, but good enough for now]
+
+
+---
+class: inverse, middle, center
+
+# Let's jump right in!
+
+---
+class: inverse, middle, center
+
+# Step 1
+
+Make a [repo on <i class="fab fa-github fa-lg fa-fw"></i>GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
+
+---
+class:inverse, middle, center
+
+# Step 2
+
+Make a [new RStudio project via git clone](https://happygitwithr.com/new-github-first.html#new-rstudio-project-via-git-clone) <br>
+    *File > New Project > Version Control > Git*
+
+---
+class:inverse, middle
+
+# Step 3
+
+Once per machine...
+
+
+```{r eval = FALSE}
+install.packages("blogdown")
+```
+
+--
+
+Once per work session...
+
+```{r eval = FALSE}
+library(blogdown)
+```
+
+---
+class:inverse, middle
+
+# Step 4
+
+```{r eval = FALSE}
+new_site(theme = "gcushen/hugo-academic", 
+         sample = TRUE, 
+         theme_example = TRUE, 
+         empty_dirs = TRUE,
+         to_yaml = TRUE)
+```
+
+
