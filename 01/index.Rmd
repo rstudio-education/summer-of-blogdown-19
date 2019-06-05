@@ -157,6 +157,25 @@ background-size: contain
 background-image: url(../assets/emi-showcase.gif)
 background-size: cover
 
+
+---
+class: inverse, middle, center
+
+# `r emo::ji("sparkles")` Quiz! `r emo::ji("sparkles")`
+
+--
+
+For <i class="fab fa-r-project"></i> users, why `blogdown` instead of [WordPress, Tumblr, Medium.com, Blogger.com]?
+
+--
+
+My answers:
+
++ Own your content
++ Use R Markdown to create content
++ Integrated within RStudio (my happy place)
+
+
 ---
 class: inverse, middle
 
@@ -219,8 +238,9 @@ class: inverse, middle, center
 # Let's jump right in!
 
 ---
+class: middle, center
 
-```{r echo = FALSE, out.width="3000px"}
+```{r echo = FALSE, out.width="70%"}
 list_png <- c(here::here("assets/flow01-summer-blogdown-github.png"),
               here::here("assets/flow02-summer-blogdown-clone.png"),
               here::here("assets/flow03-summer-blogdown-build.png"),
@@ -240,7 +260,7 @@ class: inverse, middle, center
 
 --
 
-```{r echo = FALSE, out.width="80%"}
+```{r echo = FALSE, out.width="70%"}
 knitr::include_graphics("../assets/flow01-summer-blogdown-github.png")
 ```
 
@@ -255,7 +275,7 @@ class:inverse, middle, center
 
 --
 
-```{r echo = FALSE, out.width="80%"}
+```{r echo = FALSE, out.width="70%"}
 knitr::include_graphics("../assets/flow02-summer-blogdown-clone.png")
 ```
 
@@ -280,7 +300,7 @@ class:inverse, middle, center
 
 --
 
-```{r echo = FALSE, out.width="80%"}
+```{r echo = FALSE, out.width="70%"}
 knitr::include_graphics("../assets/flow03-summer-blogdown-build.png")
 ```
 
@@ -364,6 +384,19 @@ knitr::include_graphics("../assets/first-serve.png")
 
 https://academic-demo.netlify.com/
 
+---
+class: inverse, middle, center
+
+# `r emo::ji("sparkles")` Quiz! `r emo::ji("sparkles")`
+
+--
+
+What does the argument `theme = "gcushen/hugo-academic"` do when you call the `new_site()` function? 
+
+
+--
+
+Hint: https://github.com/gcushen/hugo-academic
 
 ---
 class: middle, inverse, center
@@ -373,7 +406,6 @@ class: middle, inverse, center
 --
 
 ```{r echo = FALSE, out.width="80%"}
-library(magick)
 list_png <- c(here::here("assets/blogdown-lifecycle/Slide1.png"),
               here::here("assets/blogdown-lifecycle/Slide2.png"),
               here::here("assets/blogdown-lifecycle/Slide3.png"))
@@ -387,13 +419,27 @@ list_png %>%
 
 
 ---
+class: inverse, middle, center
+
+# `r emo::ji("sparkles")` Quiz! `r emo::ji("sparkles")`
+
+--
+
+What happens if you edit `public/` directly, or delete the folder altogether, then serve the site again? 
+
+
+Hint: try it! `r emo::ji("fire")`
+
+
+
+---
 class:inverse, middle, center
 
 # Step 4
 
 --
 
-```{r echo = FALSE, out.width="80%"}
+```{r echo = FALSE, out.width="70%"}
 knitr::include_graphics("../assets/flow04-summer-blogdown-netlify.png")
 ```
 
@@ -428,7 +474,6 @@ class: middle, inverse, center
 --
 
 ```{r echo = FALSE, out.width = "80%"}
-library(magick)
 list_png <- c(here::here("assets/blogdown-lifecycle/Slide3.png"),
               here::here("assets/blogdown-lifecycle/Slide5.png"),
               here::here("assets/blogdown-lifecycle/Slide6.png"))
@@ -440,27 +485,88 @@ list_png %>%
   image_animate(fps = .5)  # animates, can opt for number of loops
 ```
 
+
+---
+class: inverse, middle, center
+
+# `r emo::ji("sparkles")` Quiz! `r emo::ji("sparkles")`
+
+--
+
+What happens if you edit `public/` directly, or delete the folder altogether, then serve the site again? 
+
+
+Hint: try it! `r emo::ji("fire")`
+
 ---
 class: middle, inverse, center
 
-# Automating it `r emo::ji("robot")`
+# Mission accomplished
 
+
+--
+
+`r emo::ji("graduate")` Used [Hugo](https://gohugo.io/) via the [Academic theme](https://themes.gohugo.io/academic/) to make a website
+
+--
+
+`r emo::ji("computer")` Deployed site from our computer to the INTERNET
 
 ---
 class: middle, inverse, center
 
-# Step 4 `r emo::ji("rocket")`
+# To Do (on deck for day 02)
 
-```{r echo = FALSE, out.width = "80%"}
-library(magick)
-list_png <- c(here::here("assets/blogdown-lifecycle/Slide7.png"),
-              here::here("assets/blogdown-lifecycle/Slide8.png"),
-              here::here("assets/blogdown-lifecycle/Slide9.png"),
-              here::here("assets/blogdown-lifecycle/Slide10.png"))
+--
 
-list_png %>% 
-  map(image_read) %>% # reads each path file
-  image_join() %>% # joins image
-  image_scale("2000") %>% 
-  image_animate(fps = .5)  # animates, can opt for number of loops
-```
+<i class="fab fa-github fa-lg fa-fw"></i> Use GitHub for version control
+
+--
+
+`r emo::ji("rocket")` Use Netlify for continuous deployment
+
+---
+name: homework
+class: middle, inverse, center
+
+# What do I need to do before day 02?
+
+Homework on the next few slides...
+---
+
+# Do the following with serve site running...
+
+1. Open up the `config.toml` file. Change your site title, then close this file!
+
+1. Go to  `config/_default/params.toml`. Now have some fun! Here are some ideas:
+    + change the color theme
+    + play with the day/night theme button
+    + change the font 
+    + ensure that <i class="fab fa-r-project"></i> code is highlighted (check out the "Hello R Markdown" post to see these changes in action)
+
+1. Attempt to update your site (doh!)
+
+More on next slide...
+
+---
+
+# Prepare for tomorrow
+
+1. Find a `.jpg` file you want to use as a profile photo.
+
+1. Look at the default landing page for your current "out of the box" example site- scroll through the sections. Which do you like? Which do you want to cut? Make a list!
+
+1. Look at the upper menu navbar- what menu items do you want? What is missing? Make a list!
+
+Want more?...
+
+---
+name: extra
+
+# Extra
+
+1. Use the same `config/_default/params.toml` file to change the code [highlight style](https://cdnjs.com/libraries/highlight.js/)
+
+1. Update your contact info for the contact form
+
+1. For some light reading, check out this "learn x in y minutes" primer on [TOML](https://learnxinyminutes.com/docs/toml/). You probably already know about [YAML](https://learnxinyminutes.com/docs/yaml/) as an R Markdown user- but there are important differences!
