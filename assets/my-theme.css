@@ -137,4 +137,15 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
   display: none;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
 
+.module {
+  background: 
+    url("../assets/sun.png");
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  margin: 1px 0 0 1px;
+  position: relative;
+  float: right;
+}

@@ -20,10 +20,15 @@ class: title-slide, top, left
 background-image: url(../assets/scott-webb-125443-unsplash.jpg)
 background-size: cover
 
+&lt;div class="module mid"&gt;
+  &lt;h4&gt;day 01&lt;/h2&gt;
+&lt;/div&gt;
 
-# Summer of Blogdown- Day 01
+# Summer of Blogdown
 
 ### Alison Hill
+
+
 
 .footnote[
 &lt;img src="../assets/RStudio-Logo-White.png" alt="rstudio" style="float:left;width:150px;"/&gt;
@@ -53,7 +58,7 @@ class: inverse, middle, center
 ---
 template: blogdown
 
-&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/blogdown.png" width="25%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/blogdown.png" width="25%" /&gt;
 
 
 ---
@@ -95,7 +100,7 @@ One difference here is that you own your content, and the entire pipeline for cr
 ---
 class: center, middle
 
-&lt;img src="../assets/bonus.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;img src="../assets/bonus.jpg" width="90%" /&gt;
 
 --
 
@@ -119,7 +124,15 @@ background-image: url(../assets/amber.png)
 background-size: contain
 
 ---
+background-image: url(../assets/openscapes.png)
+background-size: contain
+
+---
 background-image: url(../assets/earo.png)
+background-size: contain
+
+---
+background-image: url(../assets/malcolm.png)
 background-size: contain
 
 ---
@@ -130,40 +143,58 @@ background-size: contain
 background-image: url(../assets/emi-showcase.gif)
 background-size: cover
 
-
-
 ---
 class: inverse, middle
 
-# What does it actually *do*?
+# What does it actually do?
 
 .left-column[
 
-&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/blogdown.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://gohugo.io/img/hugo.png" width="50%" /&gt;
 
 ]
 
---
-
 .right-column[
+
 
 
 ```r
 install_hugo()
 
+hugo_version()
+
+update_hugo() 
+```
+]
+
+---
+class: inverse, middle
+
+# What does it actually do?
+
+.left-column[
+
+&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/blogdown.png" width="50%" /&gt;
+
+]
+
+
+
+.right-column[
+
+
+
+```r
 new_site()
 
-new_content()
+new_content() # via add-in
 
-serve_site()
+serve_site() # ditto, via add-in
 ```
 
 
 ]
 
---
-
-.footnote[*not 100% accurate, but good enough for now]
 
 
 ---
@@ -176,6 +207,8 @@ class: inverse, middle, center
 
 # Step 1
 
+--
+
 Make a [repo on &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
 
 ---
@@ -183,13 +216,20 @@ class:inverse, middle, center
 
 # Step 2
 
+--
+
 Make a [new RStudio project via git clone](https://happygitwithr.com/new-github-first.html#new-rstudio-project-via-git-clone) &lt;br&gt;
     *File &gt; New Project &gt; Version Control &gt; Git*
+
+&lt;img src="../assets/new-project.png" width="50%" /&gt;
+
 
 ---
 class:inverse, middle
 
 # Step 3
+
+--
 
 Once per machine...
 
@@ -221,6 +261,62 @@ new_site(theme = "gcushen/hugo-academic",
          empty_dirs = TRUE,
          to_yaml = TRUE)
 ```
+
+---
+class:inverse, middle
+
+# Step 4 😱
+
+https://themes.gohugo.io/academic/
+
+.pull-left[
+
+&lt;img src="../assets/academic-min-version.png" width="611" /&gt;
+
+]
+
+--
+
+.pull-right[
+
+
+```r
+hugo_version()
+update_hugo(force = TRUE)
+```
+
+]
+
+
+
+---
+class: middle, inverse, center
+
+# Success?
+
+&lt;img src="../assets/first-serve.png" width="75%" /&gt;
+
+https://academic-demo.netlify.com/
+
+---
+class: middle, inverse, center
+
+# Drop it!
+
+https://app.netlify.com/drop
+
+&lt;img src="../assets/netlify-drop.png" width="50%" /&gt;
+
+---
+class: middle, inverse, center
+
+# What just happened?
+
+
+---
+class: middle, inverse, center
+
+# Automating it 🤖
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

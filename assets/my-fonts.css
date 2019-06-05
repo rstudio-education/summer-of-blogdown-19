@@ -1,6 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Mono:400,700);
 @import url('https://fonts.googleapis.com/css?family=Cabin:300,400');
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+
+.mid h4 {
+  font-family: 'PT Mono', sans-serif;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 .inverse h1 {
   font-family: 'Rock Salt', cursive;

@@ -1,6 +1,6 @@
 ---
 title: "Summer of Blogdown"
-subtitle: "Day 01"
+subtitle: "day 01"
 author: Alison Hill
 output:
   xaringan::moon_reader:
@@ -21,17 +21,22 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
-  comment = NA, dpi = 300, fig.align = "center", out.width = "80%", cache = FALSE)
+  comment = NA, dpi = 300)
 ```
 
 class: title-slide, top, left
 background-image: url(../assets/scott-webb-125443-unsplash.jpg)
 background-size: cover
 
+<div class="module mid">
+  <h4>`r rmarkdown::metadata$subtitle`</h2>
+</div>
 
-# `r rmarkdown::metadata$title`- `r rmarkdown::metadata$subtitle`
+# `r rmarkdown::metadata$title`
 
 ### `r rmarkdown::metadata$author`
+
+
 
 .footnote[
 <img src="../assets/RStudio-Logo-White.png" alt="rstudio" style="float:left;width:150px;"/>
@@ -131,7 +136,15 @@ background-image: url(../assets/amber.png)
 background-size: contain
 
 ---
+background-image: url(../assets/openscapes.png)
+background-size: contain
+
+---
 background-image: url(../assets/earo.png)
+background-size: contain
+
+---
+background-image: url(../assets/malcolm.png)
 background-size: contain
 
 ---
@@ -142,12 +155,35 @@ background-size: contain
 background-image: url(../assets/emi-showcase.gif)
 background-size: cover
 
+---
+class: inverse, middle
 
+# What does it actually do?
+
+.left-column[
+
+```{r out.width = "50%", echo = FALSE}
+knitr::include_graphics("https://gohugo.io/img/hugo.png")
+```
+
+]
+
+.right-column[
+
+
+```{r eval = FALSE}
+install_hugo()
+
+hugo_version()
+
+update_hugo() 
+```
+]
 
 ---
 class: inverse, middle
 
-# What does it actually *do*?
+# What does it actually do?
 
 .left-column[
 
@@ -157,26 +193,22 @@ knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/
 
 ]
 
---
+
 
 .right-column[
 
-```{r eval = FALSE}
-install_hugo()
 
+```{r eval = FALSE}
 new_site()
 
-new_content()
+new_content() # via add-in
 
-serve_site()
+serve_site() # ditto, via add-in
 ```
 
 
 ]
 
---
-
-.footnote[*not 100% accurate, but good enough for now]
 
 
 ---
@@ -189,6 +221,8 @@ class: inverse, middle, center
 
 # Step 1
 
+--
+
 Make a [repo on <i class="fab fa-github fa-lg fa-fw"></i>GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
 
 ---
@@ -196,13 +230,22 @@ class:inverse, middle, center
 
 # Step 2
 
+--
+
 Make a [new RStudio project via git clone](https://happygitwithr.com/new-github-first.html#new-rstudio-project-via-git-clone) <br>
     *File > New Project > Version Control > Git*
+
+```{r echo = FALSE, out.width='50%'}
+knitr::include_graphics("../assets/new-project.png")
+```
+
 
 ---
 class:inverse, middle
 
 # Step 3
+
+--
 
 Once per machine...
 
@@ -215,7 +258,7 @@ install.packages("blogdown")
 
 Once per work session...
 
-```{r eval = FALSE}
+```{r}
 library(blogdown)
 ```
 
@@ -232,4 +275,63 @@ new_site(theme = "gcushen/hugo-academic",
          to_yaml = TRUE)
 ```
 
+---
+class:inverse, middle
 
+# Step 4 `r emo::ji("scream")`
+
+https://themes.gohugo.io/academic/
+
+.pull-left[
+
+```{r echo = FALSE}
+knitr::include_graphics("../assets/academic-min-version.png")
+```
+
+]
+
+--
+
+.pull-right[
+
+```{r eval = FALSE}
+hugo_version()
+update_hugo(force = TRUE)
+```
+
+]
+
+
+
+---
+class: middle, inverse, center
+
+# Success?
+
+```{r echo = FALSE, out.width="75%"}
+knitr::include_graphics("../assets/first-serve.png")
+```
+
+https://academic-demo.netlify.com/
+
+---
+class: middle, inverse, center
+
+# Drop it!
+
+https://app.netlify.com/drop
+
+```{r echo = FALSE, out.width="50%"}
+knitr::include_graphics("../assets/netlify-drop.png")
+```
+
+---
+class: middle, inverse, center
+
+# What just happened?
+
+
+---
+class: middle, inverse, center
+
+# Automating it `r emo::ji("robot")`
