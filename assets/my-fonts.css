@@ -1,6 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Mono:400,700);
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cabin:300,400');
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+
+.remark-code { 
+  font-family: 'PT Mono', monospace;
+}
+
+.remark-inline-code { 
+  font-family: 'PT Mono', monospace; 
+}
 
 .mid h4 {
   font-family: 'PT Mono', sans-serif;
@@ -62,6 +70,7 @@ h1, h2, h3 {
     font-family: 'Cabin', sans-serif;
     font-weight: 300;
 }
+
 
 
 
