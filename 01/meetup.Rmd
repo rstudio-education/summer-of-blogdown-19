@@ -22,6 +22,8 @@ output:
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
   comment = NA, dpi = 300)
+library(magick)
+library(tidyverse)
 ```
 
 class: title-slide, top, left
@@ -217,11 +219,32 @@ class: inverse, middle, center
 # Let's jump right in!
 
 ---
+
+```{r echo = FALSE, out.width="3000px"}
+list_png <- c(here::here("assets/flow01-summer-blogdown-github.png"),
+              here::here("assets/flow02-summer-blogdown-clone.png"),
+              here::here("assets/flow03-summer-blogdown-build.png"),
+              here::here("assets/flow04-summer-blogdown-netlify.png"))
+
+list_png %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_scale("3000") %>% 
+  image_animate(fps = .5)  # animates, can opt for number of loops
+```
+
+---
 class: inverse, middle, center
 
 # Step 1
 
 --
+
+```{r echo = FALSE, out.width="80%"}
+knitr::include_graphics("../assets/flow01-summer-blogdown-github.png")
+```
+
+
 
 Make a [repo on <i class="fab fa-github fa-lg fa-fw"></i>GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
 
@@ -232,6 +255,16 @@ class:inverse, middle, center
 
 --
 
+```{r echo = FALSE, out.width="80%"}
+knitr::include_graphics("../assets/flow02-summer-blogdown-clone.png")
+```
+
+---
+class:inverse, middle, center
+
+# Step 2
+
+
 Make a [new RStudio project via git clone](https://happygitwithr.com/new-github-first.html#new-rstudio-project-via-git-clone) <br>
     *File > New Project > Version Control > Git*
 
@@ -241,31 +274,46 @@ knitr::include_graphics("../assets/new-project.png")
 
 
 ---
-class:inverse, middle
+class:inverse, middle, center
 
 # Step 3
 
 --
 
-Once per machine...
+```{r echo = FALSE, out.width="80%"}
+knitr::include_graphics("../assets/flow03-summer-blogdown-build.png")
+```
+
+
+---
+class:inverse, middle
+
+.left-column[
+
+# Step 3
+
+]
+
+--
+
+.right-column[
+
+1x per .shout[machine]...
 
 
 ```{r eval = FALSE}
 install.packages("blogdown")
 ```
 
---
 
-Once per work session...
+1x per .shout[work session]...
 
 ```{r}
 library(blogdown)
 ```
 
----
-class:inverse, middle
 
-# Step 4
+1x per .shout[project]...
 
 ```{r eval = FALSE}
 new_site(theme = "gcushen/hugo-academic", 
@@ -275,10 +323,12 @@ new_site(theme = "gcushen/hugo-academic",
          to_yaml = TRUE)
 ```
 
+]
+
 ---
 class:inverse, middle
 
-# Step 4 `r emo::ji("scream")`
+# Step 3 `r emo::ji("scream")`
 
 https://themes.gohugo.io/academic/
 
@@ -314,16 +364,60 @@ knitr::include_graphics("../assets/first-serve.png")
 
 https://academic-demo.netlify.com/
 
+
 ---
 class: middle, inverse, center
 
-# Drop it!
+# What just happened?
+
+--
+
+```{r echo = FALSE, out.width="80%"}
+library(magick)
+list_png <- c(here::here("assets/blogdown-lifecycle/Slide1.png"),
+              here::here("assets/blogdown-lifecycle/Slide2.png"),
+              here::here("assets/blogdown-lifecycle/Slide3.png"))
+
+list_png %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_scale("3000") %>% 
+  image_animate(fps = .5)  # animates, can opt for number of loops
+```
+
+
+---
+class:inverse, middle, center
+
+# Step 4
+
+--
+
+```{r echo = FALSE, out.width="80%"}
+knitr::include_graphics("../assets/flow04-summer-blogdown-netlify.png")
+```
+
+
+---
+class: middle, inverse, center
+
+# Step 4 . . . drop `public/`!
+
+.pull-left[
+
+Go here:
 
 https://app.netlify.com/drop
 
-```{r echo = FALSE, out.width="50%"}
+]
+
+.pull-right[
+
+```{r echo = FALSE}
 knitr::include_graphics("../assets/netlify-drop.png")
 ```
+
+]
 
 ---
 class: middle, inverse, center
@@ -331,7 +425,42 @@ class: middle, inverse, center
 # What just happened?
 
 
+--
+
+```{r echo = FALSE, out.width = "80%"}
+library(magick)
+list_png <- c(here::here("assets/blogdown-lifecycle/Slide3.png"),
+              here::here("assets/blogdown-lifecycle/Slide5.png"),
+              here::here("assets/blogdown-lifecycle/Slide6.png"))
+
+list_png %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_scale("2000") %>% 
+  image_animate(fps = .5)  # animates, can opt for number of loops
+```
+
 ---
 class: middle, inverse, center
 
 # Automating it `r emo::ji("robot")`
+
+
+---
+class: middle, inverse, center
+
+# Step 4 `r emo::ji("rocket")`
+
+```{r echo = FALSE, out.width = "80%"}
+library(magick)
+list_png <- c(here::here("assets/blogdown-lifecycle/Slide7.png"),
+              here::here("assets/blogdown-lifecycle/Slide8.png"),
+              here::here("assets/blogdown-lifecycle/Slide9.png"),
+              here::here("assets/blogdown-lifecycle/Slide10.png"))
+
+list_png %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_scale("2000") %>% 
+  image_animate(fps = .5)  # animates, can opt for number of loops
+```

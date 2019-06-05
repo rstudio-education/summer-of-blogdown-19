@@ -203,11 +203,19 @@ class: inverse, middle, center
 # Let's jump right in!
 
 ---
+
+&lt;img src="meetup_files/figure-html/unnamed-chunk-7-1.gif" width="3000px" /&gt;
+
+---
 class: inverse, middle, center
 
 # Step 1
 
 --
+
+&lt;img src="../assets/flow01-summer-blogdown-github.png" width="80%" /&gt;
+
+
 
 Make a [repo on &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
 
@@ -218,6 +226,14 @@ class:inverse, middle, center
 
 --
 
+&lt;img src="../assets/flow02-summer-blogdown-clone.png" width="80%" /&gt;
+
+---
+class:inverse, middle, center
+
+# Step 2
+
+
 Make a [new RStudio project via git clone](https://happygitwithr.com/new-github-first.html#new-rstudio-project-via-git-clone) &lt;br&gt;
     *File &gt; New Project &gt; Version Control &gt; Git*
 
@@ -225,13 +241,29 @@ Make a [new RStudio project via git clone](https://happygitwithr.com/new-github-
 
 
 ---
-class:inverse, middle
+class:inverse, middle, center
 
 # Step 3
 
 --
 
-Once per machine...
+&lt;img src="../assets/flow03-summer-blogdown-build.png" width="80%" /&gt;
+
+
+---
+class:inverse, middle
+
+.left-column[
+
+# Step 3
+
+]
+
+--
+
+.right-column[
+
+1x per .shout[machine]...
 
 
 
@@ -239,19 +271,16 @@ Once per machine...
 install.packages("blogdown")
 ```
 
---
 
-Once per work session...
+1x per .shout[work session]...
 
 
 ```r
 library(blogdown)
 ```
 
----
-class:inverse, middle
 
-# Step 4
+1x per .shout[project]...
 
 
 ```r
@@ -262,10 +291,12 @@ new_site(theme = "gcushen/hugo-academic",
          to_yaml = TRUE)
 ```
 
+]
+
 ---
 class:inverse, middle
 
-# Step 4 😱
+# Step 3 😱
 
 https://themes.gohugo.io/academic/
 
@@ -298,14 +329,45 @@ class: middle, inverse, center
 
 https://academic-demo.netlify.com/
 
+
 ---
 class: middle, inverse, center
 
-# Drop it!
+# What just happened?
+
+--
+
+&lt;img src="meetup_files/figure-html/unnamed-chunk-18-1.gif" width="80%" /&gt;
+
+
+---
+class:inverse, middle, center
+
+# Step 4
+
+--
+
+&lt;img src="../assets/flow04-summer-blogdown-netlify.png" width="80%" /&gt;
+
+
+---
+class: middle, inverse, center
+
+# Step 4 . . . drop `public/`!
+
+.pull-left[
+
+Go here:
 
 https://app.netlify.com/drop
 
-&lt;img src="../assets/netlify-drop.png" width="50%" /&gt;
+]
+
+.pull-right[
+
+&lt;img src="../assets/netlify-drop.png" width="502" /&gt;
+
+]
 
 ---
 class: middle, inverse, center
@@ -313,10 +375,22 @@ class: middle, inverse, center
 # What just happened?
 
 
+--
+
+&lt;img src="meetup_files/figure-html/unnamed-chunk-21-1.gif" width="80%" /&gt;
+
 ---
 class: middle, inverse, center
 
 # Automating it 🤖
+
+
+---
+class: middle, inverse, center
+
+# Step 4 🚀
+
+&lt;img src="meetup_files/figure-html/unnamed-chunk-22-1.gif" width="80%" /&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
