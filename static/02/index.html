@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Summer of Blogdown</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alison Hill" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/my-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide, top, left
+background-image: url(../assets/etienne-girardet-360034-unsplash.jpg)
+background-size: cover
+
+&lt;div class="module mid"&gt;
+  &lt;h4&gt;day 02&lt;/h2&gt;
+&lt;/div&gt;
+
+# Summer of Blogdown
+
+### Alison Hill
+
+
+
+.footnote[
+&lt;img src="../assets/RStudio-Logo-White.png" alt="rstudio" style="float:left;width:150px;"/&gt;
+]
+
+---
+name: hello
+class: inverse, right, middle
+
+
+&lt;img style="border-radius: 50%;" src="https://github.com/apreshill.png" width="150px"/&gt;
+
+# Find me at...
+
+[<i class="fab  fa-twitter "></i> @apreshill](http://twitter.com/apreshill)  
+[<i class="fab  fa-github "></i> @apreshill](http://github.com/apreshill)  
+[<i class="fas  fa-link "></i> alison.rbind.io](https://alison.rbind.io)  
+[<i class="fas  fa-paper-plane "></i> alison@rstudio.com](mailto:alison@rstudio.com)
+
+---
+class: middle, inverse, center
+
+# Mission accomplished
+
+
+--
+
+👨‍🎓 Used [Hugo](https://gohugo.io/) via the [Academic theme](https://themes.gohugo.io/academic/) to make a website
+
+--
+
+💻 Deployed site from our computer to the INTERNET
+
+---
+class: middle, inverse, center
+
+# Mission not-quite-accomplished
+
+
+
+
+👨‍🎓 Used [Hugo](https://gohugo.io/) via the [Academic theme](https://themes.gohugo.io/academic/) to make a website
+
+
+
+💻 Deployed site from our computer to the INTERNET
+
+--
+
+&lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt; Used  GitHub for version control
+
+--
+
+🚀 Used Netlify for continuous deployment
+
+---
+class: middle, center
+
+&lt;img src="index_files/figure-html/unnamed-chunk-1-1.gif" width="70%" /&gt;
+
+
+---
+class:inverse, middle, center
+
+# Step 4
+
+--
+
+&lt;img src="../assets/flow04-summer-blogdown-netlify.png" width="70%" /&gt;
+
+---
+class: middle, inverse, center
+
+# Drag &amp; drop deploy
+
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-3-1.gif" width="80%" /&gt;
+
+
+---
+class: inverse, middle, center
+
+# ✨ Quiz! ✨
+
+--
+
+What did you notice was painful about updating your site using this method?
+
+
+---
+class: middle, inverse, center
+
+# Hello &amp; Goodbye 👋
+
+&lt;u&gt;Nelson Bighetti&lt;/u&gt;
+
+---
+
+# Say my name
+
+Take about 8 minutes to do the following locally:
+
++ Open your blogdown project and use the serve site add-in.
+
++ Go to `content/authors/admin/`.
+
++ Rename your profile .jpg pic `avatar.jpg` and drop it in here (say yes to replace it).
+
++ Edit the `_index.md` to customize.
+
+---
+class: middle, inverse, center
+
+# Now let's automate 🤖
+
+
+---
+class: middle, inverse, center
+
+# Step 4 🚀
+
+&lt;img src="index_files/figure-html/unnamed-chunk-4-1.gif" width="80%" /&gt;
+
+---
+
+need to do 3 things: 
+
+1. create netlify account linked to github acct
+
+1. update gitignore file
+
+1. add netlify.toml file
+
+---
+class: middle, inverse, center
+
+# Mission accomplished
+
+
+--
+
+👩‍🎓 Used [Hugo](https://gohugo.io/) via the [Academic theme](https://themes.gohugo.io/academic/) to make a website
+
+--
+
+💻 Deployed site from our computer to the INTERNET
+
+--
+
+&lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt; Used  GitHub for version control
+
+--
+
+🚀 Used Netlify for continuous deployment
+
+---
+
+class: inverse, middle, center
+
+# ✨ Quiz! ✨
+
+--
+
+Using continuous deployment, do you need to serve site before committing to GitHub?
+
+---
+
+let's start by getting a sense for the directory structure
+
+---
+
+class: inverse, middle, center
+
+# ✨ Quiz! ✨
+
+--
+
+With a partner, make a list of directories you should not touch in a `blogdown` project. Which files/folders *should* you touch?
+
+.pull-left[
+## Can't touch this
+]
+
+.pull-left[
+## Do touch this
+]
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"slideNumberFormat": "",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

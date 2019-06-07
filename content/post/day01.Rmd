@@ -1,0 +1,15 @@
+---
+title: "Day 01"
+author: "Alison Hill"
+date: 2019-06-10T21:13:14-05:00
+---
+
+# Slides <a href="/01" target="_blank">here</a>
+
+```{r echo = FALSE}
+knitr::include_url("https://summer-of-blogdown.netlify.com/01")
+```
+
+
+
+# Homework

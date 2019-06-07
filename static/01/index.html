@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Summer of Blogdown</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alison Hill" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/my-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide, top, left
+background-image: url(../assets/scott-webb-125443-unsplash.jpg)
+background-size: cover
+
+&lt;div class="module mid"&gt;
+  &lt;h4&gt;day 01&lt;/h2&gt;
+&lt;/div&gt;
+
+# Summer of Blogdown
+
+### Alison Hill
+
+
+
+.footnote[
+&lt;img src="../assets/RStudio-Logo-White.png" alt="rstudio" style="float:left;width:150px;"/&gt;
+]
+
+---
+name: hello
+class: inverse, right, middle
+
+
+&lt;img style="border-radius: 50%;" src="https://github.com/apreshill.png" width="150px"/&gt;
+
+# Find me at...
+
+[<i class="fab  fa-twitter "></i> @apreshill](http://twitter.com/apreshill)  
+[<i class="fab  fa-github "></i> @apreshill](http://github.com/apreshill)  
+[<i class="fas  fa-link "></i> alison.rbind.io](https://alison.rbind.io)  
+[<i class="fas  fa-paper-plane "></i> alison@rstudio.com](mailto:alison@rstudio.com)
+
+
+---
+name: blogdown
+class: inverse, middle, center
+
+# What is blogdown?
+
+---
+template: blogdown
+
+&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/blogdown.png" width="25%" /&gt;
+
+
+---
+template: blogdown
+
+--
+
+An &lt;i class="fab fa-r-project"&gt;&lt;/i&gt; package...
+
+--
+
+that lets you create websites in 
+
+&lt;img src="../assets/RStudio-Logo-White.png" width = "15%"&gt;
+
+???
+
+So what is blogdown?
+
+It is an R package... can I get a show of hands for everyone here who uses R? OK keep them up...
+
+That lets you create websites in RStudio...can I get all of you R users to keep your hand up if you use RStudio, so lower your hand if you don't use RStudio
+
+Perfect, thanks! So this is one of the first perks of blogdown, which is that you can build a website in the RStudio IDE using tools you are familiar with, and you won't need very much else to start.
+
+---
+
+
+![](../assets/hugo-themes.gif)
+
+
+??? 
+
+The package helps you to use a static site generator named Hugo. If you didn't understand much of the last sentence I said, that is OK! The main thing you'll want to know is that Hugo gives you over 100 themes to choose from, so you can create a custom-looking website, in the same way that Wordpress offers website themes.
+
+One difference here is that you own your content, and the entire pipeline for creating it, from start to finish, which I think is a huge benefit to users. You control what, you control when, you control how.
+
+
+---
+class: center, middle
+
+&lt;img src="../assets/bonus.jpg" width="90%" /&gt;
+
+--
+
+
+# .shout[You can use R Markdown!]
+
+
+
+???
+
+And a bonus is that because blogdown is built on top of R Markdown, you can include code and output in your website content.
+
+This means you can include R code, but also Python, Julia, C++, any language engine supported in R Markdown.
+
+This makes blogdown ideal for data scientists.
+
+So what does a blogdown site look like?
+
+---
+background-image: url(../assets/amber.png)
+background-size: contain
+
+---
+background-image: url(../assets/openscapes.png)
+background-size: contain
+
+---
+background-image: url(../assets/earo.png)
+background-size: contain
+
+---
+background-image: url(../assets/malcolm.png)
+background-size: contain
+
+---
+background-image: url(../assets/alison.png)
+background-size: contain
+  
+---
+background-image: url(../assets/emi-showcase.gif)
+background-size: cover
+
+
+---
+class: inverse, middle, center
+
+# ✨ Quiz! ✨
+
+--
+
+For &lt;i class="fab fa-r-project"&gt;&lt;/i&gt; users, why `blogdown` instead of [WordPress, Tumblr, Medium.com, Blogger.com]?
+
+--
+
+My answers:
+
++ Own your content
++ Use R Markdown to create content
++ Integrated within RStudio (my happy place)
+
+
+---
+class: inverse, middle
+
+# What does it actually do?
+
+.left-column[
+
+&lt;img src="https://gohugo.io/img/hugo.png" width="50%" /&gt;
+
+]
+
+.right-column[
+
+
+
+```r
+install_hugo()
+
+hugo_version()
+
+update_hugo() 
+```
+]
+
+---
+class: inverse, middle
+
+# What does it actually do?
+
+.left-column[
+
+&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/blogdown.png" width="50%" /&gt;
+
+]
+
+
+
+.right-column[
+
+
+
+```r
+new_site()
+
+new_content() # via add-in
+
+serve_site() # ditto, via add-in
+```
+
+
+]
+
+
+
+---
+class: inverse, middle, center
+
+# Let's jump right in!
+
+---
+class: middle, center
+
+&lt;img src="index_files/figure-html/unnamed-chunk-7-1.gif" width="70%" /&gt;
+
+---
+class: inverse, middle, center
+
+# Step 1
+
+--
+
+&lt;img src="../assets/flow01-summer-blogdown-github.png" width="70%" /&gt;
+
+
+
+Make a [repo on &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
+
+---
+class:inverse, middle, center
+
+# Step 2
+
+--
+
+&lt;img src="../assets/flow02-summer-blogdown-clone.png" width="70%" /&gt;
+
+---
+class:inverse, middle, center
+
+# Step 2
+
+
+Make a [new RStudio project via git clone](https://happygitwithr.com/new-github-first.html#new-rstudio-project-via-git-clone) &lt;br&gt;
+    *File &gt; New Project &gt; Version Control &gt; Git*
+
+&lt;img src="../assets/new-project.png" width="50%" /&gt;
+
+
+---
+class:inverse, middle, center
+
+# Step 3
+
+--
+
+&lt;img src="../assets/flow03-summer-blogdown-build.png" width="70%" /&gt;
+
+
+---
+class:inverse, middle
+
+.left-column[
+
+# Step 3
+
+]
+
+--
+
+.right-column[
+
+1x per .shout[machine]...
+
+
+
+```r
+install.packages("blogdown")
+```
+
+
+1x per .shout[work session]...
+
+
+```r
+library(blogdown)
+```
+
+
+1x per .shout[project]...
+
+
+```r
+new_site(theme = "gcushen/hugo-academic", 
+         sample = TRUE, 
+         theme_example = TRUE, 
+         empty_dirs = TRUE,
+         to_yaml = TRUE)
+```
+
+]
+
+---
+class:inverse, middle
+
+# Step 3 😱
+
+https://themes.gohugo.io/academic/
+
+.pull-left[
+
+&lt;img src="../assets/academic-min-version.png" width="611" /&gt;
+
+]
+
+--
+
+.pull-right[
+
+
+```r
+hugo_version()
+update_hugo(force = TRUE)
+```
+
+]
+
+
+
+---
+class: middle, inverse, center
+
+# Success?
+
+&lt;img src="../assets/first-serve.png" width="75%" /&gt;
+
+https://academic-demo.netlify.com/
+
+---
+class: inverse, middle, center
+
+# ✨ Quiz! ✨
+
+--
+
+What does the argument `theme = "gcushen/hugo-academic"` do when you call the `new_site()` function? 
+
+
+--
+
+Hint: https://github.com/gcushen/hugo-academic
+
+---
+class: middle, inverse, center
+
+# What just happened?
+
+--
+
+&lt;img src="index_files/figure-html/unnamed-chunk-18-1.gif" width="80%" /&gt;
+
+
+---
+class: inverse, middle, center
+
+# ✨ Quiz! ✨
+
+--
+
+What happens if you edit `public/` directly, or delete the folder altogether, then serve the site again? 
+
+
+Hint: try it! 🔥
+
+
+
+---
+class:inverse, middle, center
+
+# Step 4
+
+--
+
+&lt;img src="../assets/flow04-summer-blogdown-netlify.png" width="70%" /&gt;
+
+
+---
+class: middle, inverse, center
+
+# Step 4 . . . drop `public/`!
+
+.pull-left[
+
+Go here:
+
+https://app.netlify.com/drop
+
+]
+
+.pull-right[
+
+&lt;img src="../assets/netlify-drop.png" width="502" /&gt;
+
+]
+
+---
+class: middle, inverse, center
+
+# What just happened?
+
+
+--
+
+&lt;img src="index_files/figure-html/unnamed-chunk-21-1.gif" width="80%" /&gt;
+
+
+---
+class: inverse, middle, center
+
+# ✨ Quiz! ✨
+
+--
+
+What happens if you edit `public/` directly, or delete the folder altogether, then serve the site again? 
+
+
+Hint: try it! 🔥
+
+---
+class: middle, inverse, center
+
+# Mission accomplished
+
+
+--
+
+👩‍🎓 Used [Hugo](https://gohugo.io/) via the [Academic theme](https://themes.gohugo.io/academic/) to make a website
+
+--
+
+💻 Deployed site from our computer to the INTERNET
+
+---
+class: middle, inverse, center
+
+# To Do (on deck for day 02)
+
+--
+
+&lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt; Use GitHub for version control
+
+--
+
+🚀 Use Netlify for continuous deployment
+
+---
+name: homework
+class: middle, inverse, center
+
+# What do I need to do before day 02?
+
+Homework on the next few slides...
+---
+
+# Do the following with serve site running...
+
+1. Open up the `config.toml` file. Change your site title, then close this file!
+
+1. Go to  `config/_default/params.toml`. Now have some fun! Here are some ideas:
+    + change the color theme
+    + play with the day/night theme button
+    + change the font 
+    + ensure that &lt;i class="fab fa-r-project"&gt;&lt;/i&gt; code is highlighted (check out the "Hello R Markdown" post to see these changes in action)
+
+1. Attempt to update your site (doh!)
+
+More on next slide...
+
+---
+
+# Prepare for tomorrow
+
+1. Find a `.jpg` file you want to use as a profile photo.
+
+1. Look at the default landing page for your current "out of the box" example site- scroll through the sections. Which do you like? Which do you want to cut? Make a list!
+
+1. Look at the upper menu navbar- what menu items do you want? What is missing? Make a list!
+
+Want more?...
+
+---
+name: extra
+
+# Extra
+
+1. Use the same `config/_default/params.toml` file to change the code [highlight style](https://cdnjs.com/libraries/highlight.js/)
+
+1. Update your contact info for the contact form
+
+1. For some light reading, check out this "learn x in y minutes" primer on [TOML](https://learnxinyminutes.com/docs/toml/). You probably already know about [YAML](https://learnxinyminutes.com/docs/yaml/) as an R Markdown user- but there are important differences!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"slideNumberFormat": "",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

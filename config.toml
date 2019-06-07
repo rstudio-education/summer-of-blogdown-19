@@ -1,0 +1,56 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "Summer of Blogdown"
+theme = "hugo-ivy"
+googleAnalytics = ""
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+footnotereturnlinkcontents = "↩"
+
+[permalinks]
+    post = "/:slug/"
+    note = "/note/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "Pre-work"
+    url = "/prework"
+    weight = 2
+[[menu.main]]
+    name = "Schedule"
+    url = "/schedule"
+    weight = 3
+[[menu.main]]
+    name = "People"
+    url = "/people"
+    weight = 4
+[[menu.main]]
+    name = "Chat"
+    url = "https://rstudio.slack.com/messages/summer-of-blogdown/"
+    weight = 5
+[[menu.main]]
+    name = "Repo"
+    url = "https://github.com/rstudio-education/summer-of-blogdown-19"
+    weight = 6
+[[menu.main]]
+    name = "File an issue"
+    url = "https://github.com/rstudio-education/summer-of-blogdown-19/issues/new"
+    weight = 7
+
+[params]
+    
+    description = "A week of blogdown for RStudio's summer 2019 interns."
+    footer = "Powered by [Hugo](https://gohugo.io/), [blogdown](https://github.com/rstudio/blogdown) and [the Ivy theme](https://github.com/yihui/hugo-ivy)"
+
+  highlightjsVersion = "9.12.0"
+  highlightjsCDN = "//cdn.bootcss.com"
+  highlightjsLang = ["r", "yaml", "tex"]
+  highlightjsTheme = "github"
+
+
+[blackfriday]
+  hrefTargetBlank = true

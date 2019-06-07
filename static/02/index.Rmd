@@ -1,0 +1,264 @@
+---
+title: "Summer of Blogdown"
+subtitle: "day 02"
+author: Alison Hill
+output:
+  xaringan::moon_reader:
+    css: ["default", "../assets/my-theme.css", "../assets/my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "https://platform.twitter.com/widgets.js"
+    includes:
+      in_header: header.html  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
+  comment = NA, dpi = 300)
+library(magick)
+library(tidyverse)
+```
+
+class: title-slide, top, left
+background-image: url(../assets/etienne-girardet-360034-unsplash.jpg)
+background-size: cover
+
+<div class="module mid">
+  <h4>`r rmarkdown::metadata$subtitle`</h2>
+</div>
+
+# `r rmarkdown::metadata$title`
+
+### `r rmarkdown::metadata$author`
+
+
+
+.footnote[
+<img src="../assets/RStudio-Logo-White.png" alt="rstudio" style="float:left;width:150px;"/>
+]
+
+---
+name: hello
+class: inverse, right, middle
+
+
+<img style="border-radius: 50%;" src="https://github.com/apreshill.png" width="150px"/>
+
+# Find me at...
+
+[`r icon::fa("twitter")` @apreshill](http://twitter.com/apreshill)  
+[`r icon::fa("github")` @apreshill](http://github.com/apreshill)  
+[`r icon::fa("link")` alison.rbind.io](https://alison.rbind.io)  
+[`r icon::fa("paper-plane")` alison@rstudio.com](mailto:alison@rstudio.com)
+
+---
+class: middle, inverse, center
+
+# Mission accomplished
+
+
+--
+
+`r emo::ji("graduate")` Used [Hugo](https://gohugo.io/) via the [Academic theme](https://themes.gohugo.io/academic/) to make a website
+
+--
+
+`r emo::ji("computer")` Deployed site from our computer to the INTERNET
+
+---
+class: middle, inverse, center
+
+# Mission not-quite-accomplished
+
+
+
+
+`r emo::ji("graduate")` Used [Hugo](https://gohugo.io/) via the [Academic theme](https://themes.gohugo.io/academic/) to make a website
+
+
+
+`r emo::ji("computer")` Deployed site from our computer to the INTERNET
+
+--
+
+<i class="fab fa-github fa-lg fa-fw"></i> Used  GitHub for version control
+
+--
+
+`r emo::ji("rocket")` Used Netlify for continuous deployment
+
+---
+class: middle, center
+
+```{r echo = FALSE, out.width="70%"}
+list_png <- c(here::here("assets/flow01-summer-blogdown-github.png"),
+              here::here("assets/flow02-summer-blogdown-clone.png"),
+              here::here("assets/flow03-summer-blogdown-build.png"),
+              here::here("assets/flow04-summer-blogdown-netlify.png"))
+
+list_png %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_scale("3000") %>% 
+  image_animate(fps = .5)  # animates, can opt for number of loops
+```
+
+
+---
+class:inverse, middle, center
+
+# Step 4
+
+--
+
+```{r echo = FALSE, out.width="70%"}
+knitr::include_graphics("../assets/flow04-summer-blogdown-netlify.png")
+```
+
+---
+class: middle, inverse, center
+
+# Drag & drop deploy
+
+
+
+```{r echo = FALSE, out.width = "80%"}
+list_png <- c(here::here("assets/blogdown-lifecycle/Slide3.png"),
+              here::here("assets/blogdown-lifecycle/Slide5.png"),
+              here::here("assets/blogdown-lifecycle/Slide6.png"))
+
+list_png %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_scale("2000") %>% 
+  image_animate(fps = .5)  # animates, can opt for number of loops
+```
+
+
+---
+class: inverse, middle, center
+
+# `r emo::ji("sparkles")` Quiz! `r emo::ji("sparkles")`
+
+--
+
+What did you notice was painful about updating your site using this method?
+
+
+---
+class: middle, inverse, center
+
+# Hello & Goodbye `r emo::ji("wave")`
+
+<u>Nelson Bighetti</u>
+
+---
+
+# Say my name
+
+Take about 8 minutes to do the following locally:
+
++ Open your blogdown project and use the serve site add-in.
+
++ Go to `content/authors/admin/`.
+
++ Rename your profile .jpg pic `avatar.jpg` and drop it in here (say yes to replace it).
+
++ Edit the `_index.md` to customize.
+
+---
+class: middle, inverse, center
+
+# Now let's automate `r emo::ji("robot")`
+
+
+---
+class: middle, inverse, center
+
+# Step 4 `r emo::ji("rocket")`
+
+```{r echo = FALSE, out.width = "80%"}
+list_png <- c(here::here("assets/blogdown-lifecycle/Slide7.png"),
+              here::here("assets/blogdown-lifecycle/Slide8.png"),
+              here::here("assets/blogdown-lifecycle/Slide9.png"))
+
+list_png %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_scale("2000") %>% 
+  image_animate(fps = .5)  # animates, can opt for number of loops
+```
+
+---
+
+need to do 3 things: 
+
+1. create netlify account linked to github acct
+
+1. update gitignore file
+
+1. add netlify.toml file
+
+---
+class: middle, inverse, center
+
+# Mission accomplished
+
+
+--
+
+`r emo::ji("graduate")` Used [Hugo](https://gohugo.io/) via the [Academic theme](https://themes.gohugo.io/academic/) to make a website
+
+--
+
+`r emo::ji("computer")` Deployed site from our computer to the INTERNET
+
+--
+
+<i class="fab fa-github fa-lg fa-fw"></i> Used  GitHub for version control
+
+--
+
+`r emo::ji("rocket")` Used Netlify for continuous deployment
+
+---
+
+class: inverse, middle, center
+
+# `r emo::ji("sparkles")` Quiz! `r emo::ji("sparkles")`
+
+--
+
+Using continuous deployment, do you need to serve site before committing to GitHub?
+
+---
+
+let's start by getting a sense for the directory structure
+
+---
+
+class: inverse, middle, center
+
+# `r emo::ji("sparkles")` Quiz! `r emo::ji("sparkles")`
+
+--
+
+With a partner, make a list of directories you should not touch in a `blogdown` project. Which files/folders *should* you touch?
+
+.pull-left[
+## Can't touch this
+]
+
+.pull-left[
+## Do touch this
+]
+
+---
+

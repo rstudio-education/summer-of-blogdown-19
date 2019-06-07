@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>A Plain Markdown Post - Summer of Blogdown</title>
+    <meta property="og:title" content="A Plain Markdown Post - Summer of Blogdown">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section.
+[&amp;hellip;] This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The &amp;hellip;">
+      <meta property="og:description" content="This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section.
+[&amp;hellip;] This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The &amp;hellip;">
+      
+    
+
+    
+    
+    <meta name="twitter:image" content="https://bookdown.org/yihui/blogdown/images/new-post.png">
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Summer of Blogdown</a></h1>
+
+<p class="tagline">A 4-day hands-on workshop series for RStudio summer interns, 2019.</p>
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/">Home</a></li>
+  
+  <li><a href="/01">Day 01</a></li>
+  
+  <li><a href="/02">Day 02</a></li>
+  
+  <li><a href="/03">Day 03</a></li>
+  
+  <li><a href="/04">Day 04</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>A Plain Markdown Post</h1>
+
+<h3>Yihui Xie
+  /  2016-02-14</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<p>This sample post is mainly for <a href="https://github.com/rstudio/blogdown"><strong>blogdown</strong></a> users. If you do not use <strong>blogdown</strong>, you can skip the first section.</p>
+
+<h1 id="1-markdown-or-r-markdown">1. Markdown or R Markdown</h1>
+
+<p>This is a post written in plain Markdown (<code>*.md</code>) instead of R Markdown (<code>*.Rmd</code>). The major differences are:</p>
+
+<ol>
+<li>You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (<code>```{r}</code>);</li>
+<li>A plain Markdown post is rendered through <a href="https://gohugo.io/overview/configuration/">Blackfriday</a>, and an R Markdown document is compiled by <a href="http://rmarkdown.rstudio.com"><strong>rmarkdown</strong></a> and <a href="http://pandoc.org">Pandoc</a>.</li>
+</ol>
+
+<p>There are many differences in syntax between Blackfriday&rsquo;s Markdown and Pandoc&rsquo;s Markdown. For example, you can write a task list with Blackfriday but not with Pandoc:</p>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Write an R package.</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Write a book.</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> &hellip;</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Profit!</label></li>
+</ul>
+
+<p>Similarly, Blackfriday does not support LaTeX math and Pandoc does. I have added the MathJax support to this theme (<a href="https://github.com/yihui/hugo-xmin">hugo-xmin</a>) but there is a caveat for plain Markdown posts: you have to include math expressions in a pair of backticks (inline: <code>`$ $`</code>; display style: <code>`$$ $$`</code>), e.g., <code>$S_n = \sum_{i=1}^n X_i$</code>.<sup class="footnote-ref" id="fnref:This-is-because"><a href="#fn:This-is-because">1</a></sup> For R Markdown posts, you do not need the backticks, because Pandoc can identify and process math expressions.</p>
+
+<p>When creating a new post, I recommend you to use the RStudio addin &ldquo;New Post&rdquo;:</p>
+
+<p><img src="https://bookdown.org/yihui/blogdown/images/new-post.png" alt="RStudio addin New Post" /></p>
+
+<h1 id="2-sample-text">2. Sample Text</h1>
+
+<h2 id="second-level-header">Second-level header</h2>
+
+<h3 id="third-level-header">Third-level header</h3>
+
+<h4 id="fourth-level-header">Fourth-level header</h4>
+
+<p>A paragraph (with a footnote):</p>
+
+<p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <em>magna aliqua</em>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<sup class="footnote-ref" id="fnref:I-m-sure-you-are"><a href="#fn:I-m-sure-you-are">2</a></sup></p>
+
+<p>A blockquote (a gray bar at the left and lightgray background):</p>
+
+<blockquote>
+<p>Quisque mattis volutpat lorem vitae feugiat. Praesent porta est quis porta imperdiet. Aenean porta, mi non cursus volutpat, mi est mollis libero, id suscipit orci urna a augue. In fringilla euismod lacus, vitae tristique massa ultricies vitae. Mauris accumsan ligula tristique, viverra nulla sed, porta sapien. Vestibulum facilisis nec nisl blandit convallis. Maecenas venenatis porta malesuada. Ut ac erat tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla sodales quam sit amet tincidunt egestas. In et turpis at orci vestibulum ullamcorper. Aliquam sed ante libero. Sed hendrerit arcu lacus.</p>
+</blockquote>
+
+<p>Some code (with a drop-shadow effect):</p>
+
+<pre><code class="language-js">(function() {
+  var quotes = document.getElementsByTagName('blockquote'), i, quote;
+  for (i = 0; i &lt; quotes.length; i++) {
+    quote = quotes[i];
+    var n = quote.children.length;
+    if (n === 0) continue;
+    var el = quote.children[n - 1];
+    if (!el || el.nodeName !== 'P') continue;
+    // right-align a quote footer if it starts with ---
+    if (/^—/.test(el.textContent)) el.style.textAlign = 'right';
+  }
+})();
+</code></pre>
+
+<p>A table (centered by default):</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">Sepal.Length</th>
+<th align="right">Sepal.Width</th>
+<th align="right">Petal.Length</th>
+<th align="right">Petal.Width</th>
+<th align="left">Species</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+
+<tr>
+<td align="right">4.9</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+
+<tr>
+<td align="right">4.7</td>
+<td align="right">3.2</td>
+<td align="right">1.3</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+
+<tr>
+<td align="right">4.6</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+
+<tr>
+<td align="right">5.0</td>
+<td align="right">3.6</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+
+<tr>
+<td align="right">5.4</td>
+<td align="right">3.9</td>
+<td align="right">1.7</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+</tbody>
+</table>
+
+<p>An image (automatically centered when it is appropriate):</p>
+
+<p><img src="https://slides.yihui.name/gif/happy-elmo.gif" alt="Happy Elmo" /></p>
+
+<p>Looks good?</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:This-is-because">This is because we have to protect the math expressions from being interpreted as Markdown. <a class="footnote-return" href="#fnref:This-is-because">↩</a></li>
+<li id="fn:I-m-sure-you-are">I&rsquo;m sure you are bored by the text here. <a class="footnote-return" href="#fnref:I-m-sure-you-are">↩</a></li>
+</ol>
+</div>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">&larr; <a href="/post/2015/07/23/day-01/">Day 01</a></span>
+  <span class="nav-next"></span>
+</nav>
+
+
+
+
+
+<script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">&copy; <a href="https://yihui.name">Yihui Xie</a> 2017 | <a href="https://github.com/yihui">Github</a> | <a href="https://twitter.com/xieyihui">Twitter</a></div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
