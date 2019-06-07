@@ -2,6 +2,7 @@
 title: "Day 01"
 author: "Alison Hill"
 date: 2019-06-10T21:13:14-05:00
+publishDate: 2019-06-07
 ---
 
 # Slides <a href="/01" target="_blank">here</a>
