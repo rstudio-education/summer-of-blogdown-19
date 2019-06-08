@@ -6,7 +6,7 @@
   {{ range (where .Data.Pages "Section" "!=" "").Reverse }}
   <li>
     <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}">{{ .Title }}: {{ .Params.subtitle }}</a>
   </li>
   {{ end }}
 </ul>
