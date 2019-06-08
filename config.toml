@@ -42,7 +42,7 @@ footnotereturnlinkcontents = "↩"
     weight = 7
 
 [params]
-    
+    logo = "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/blogdown.png"
     description = "A week of blogdown for RStudio's summer 2019 interns."
     footer = "Powered by [Hugo](https://gohugo.io/), [blogdown](https://github.com/rstudio/blogdown) and [the Ivy theme](https://github.com/yihui/hugo-ivy)"
 

@@ -1,0 +1,5 @@
+{{ with .Site.Params.logo }}
+<h1><a href="{{ relURL "/" }}"><img src="{{ . }}" width="70%"/></a></h1>
+{{ end }}
+
+{{ with .Site.Params.Description }}<p class="tagline">{{ . }}</p>{{ end }}
