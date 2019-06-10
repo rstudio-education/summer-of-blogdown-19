@@ -6,6 +6,8 @@ date: 2019-06-10T21:13:14-05:00
 publishDate: 2019-06-07
 ---
 
+
+
 # Slides <a href="/01" target="_blank">here</a>
 
 ```{r echo = FALSE}
@@ -15,3 +17,32 @@ knitr::include_url("https://summer-of-blogdown.netlify.com/01")
 
 
 # Homework
+
+Your mission, high-level, is to personalize the biography section of your new home page:
+
+![](/assets/academic-nelson.png)
+
+1. Open your blogdown R project, and use the serve site add-in right away. 
+
+1. In this example site, a superuser is created with the username `admin` and corresponding user profile located at `content/authors/admin/_index.md`. Open up this `_index.md` file and update the YAML front matter plus the bio after the front matter (i.e. after the last `---` line) to create *your* profile.
+
+1. Find a `.jpg` file you want to use as a profile photo. For best results, place a square cropped portrait photo named `avatar.jpg` into your profile folder at `content/authors/admin/`, overwriting the example image. 
+
+1. Attempt to update your site on Netlify (doh! this is a bit of a trick `r emo::ji("wink")`).
+
+1. Sign up for a Netlify account, using your GitHub account.
+
+![](/assets/netlify-drop-signup.png)
+
+![](/assets/netlify-github-signup.png)
+
+Want more?...
+
+
+# Extra
+
+1. Look at the default landing page for your current "out of the box" example site- scroll through the sections. Which do you like? Which do you want to cut? Make a list!
+
+1. Look at the upper menu navbar- what menu items do you want? What is missing? Make a list!
+
+
