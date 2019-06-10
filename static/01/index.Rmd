@@ -373,9 +373,11 @@ knitr::include_graphics("../assets/academic-min-version.png")
 .pull-right[
 
 ```{r eval = FALSE}
-hugo_version()
-update_hugo(force = TRUE)
+hugo_version() # is it less than the minimum version?
+update_hugo(force = TRUE) # if yes, then do this
 ```
+
+then **restart R.**
 
 ]
 
