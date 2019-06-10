@@ -98,10 +98,10 @@ class: middle, inverse, center
 class: middle, center
 
 ```{r echo = FALSE, out.width="70%"}
-list_png <- c(here::here("assets/flow01-summer-blogdown-github.png"),
-              here::here("assets/flow02-summer-blogdown-clone.png"),
-              here::here("assets/flow03-summer-blogdown-build.png"),
-              here::here("assets/flow04-summer-blogdown-netlify.png"))
+list_png <- c("../assets/flow01-summer-blogdown-github.png",
+              "../assets/flow02-summer-blogdown-clone.png",
+              "../assets/flow03-summer-blogdown-build.png",
+              "../assets/flow04-summer-blogdown-netlify.png")
 
 list_png %>% 
   map(image_read) %>% # reads each path file
@@ -130,9 +130,9 @@ class: middle, inverse, center
 
 
 ```{r echo = FALSE, out.width = "80%"}
-list_png <- c(here::here("assets/blogdown-lifecycle/Slide3.png"),
-              here::here("assets/blogdown-lifecycle/Slide5.png"),
-              here::here("assets/blogdown-lifecycle/Slide6.png"))
+list_png <- c("../assets/blogdown-lifecycle/Slide3.png",
+              "../assets/blogdown-lifecycle/Slide5.png",
+              "../assets/blogdown-lifecycle/Slide6.png")
 
 list_png %>% 
   map(image_read) %>% # reads each path file
@@ -174,6 +174,14 @@ Take about 8 minutes to do the following locally:
 + Edit the `_index.md` to customize.
 
 ---
+
+1. Go to  `config/_default/params.toml`. Now have some fun! Here are some ideas:
+    + change the color theme
+    + play with the day/night theme button
+    + change the font 
+    + ensure that <i class="fab fa-r-project"></i> code is highlighted (check out the "Hello R Markdown" post to see these changes in action)
+
+---
 class: middle, inverse, center
 
 # Now let's automate `r emo::ji("robot")`
@@ -185,9 +193,9 @@ class: middle, inverse, center
 # Step 4 `r emo::ji("rocket")`
 
 ```{r echo = FALSE, out.width = "80%"}
-list_png <- c(here::here("assets/blogdown-lifecycle/Slide7.png"),
-              here::here("assets/blogdown-lifecycle/Slide8.png"),
-              here::here("assets/blogdown-lifecycle/Slide9.png"))
+list_png <- c("../assets/blogdown-lifecycle/Slide7.png",
+              "../assets/blogdown-lifecycle/Slide8.png",
+              "../assets/blogdown-lifecycle/Slide9.png")
 
 list_png %>% 
   map(image_read) %>% # reads each path file
