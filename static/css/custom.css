@@ -24,3 +24,21 @@ a {
   min-height: calc(100vh - 60px);
 }
 
+
+@media screen and (max-width: 960px) {
+    .masthead {
+    border-bottom: 3px;
+    border-bottom-style: solid;
+    border-color: #16436A;
+  }
+  
+    #menu-label {
+    color: #16436A;
+  }
+  
+    #menu-label:hover, #menu-label:focus {
+    border: 1px;
+    border-style: solid;
+    border-color: #16436A;
+  }
+}
