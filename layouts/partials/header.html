@@ -34,7 +34,7 @@
     {{ end }}
     {{ with .Site.Params.twitterImage }}
     {{ if not ($.Scratch.Get "autoImage") }}
-    <meta name="twitter:image" content="{{ absURL . }}">
+    <meta name="twitter:image" content="{{ . }}">
     {{ end }}
     {{ end }}
 
