@@ -175,13 +175,14 @@ For <i class="fab fa-r-project"></i> users, why `blogdown` instead of [WordPress
 
 --
 
-My answers:
+Some answers:
 
 + Own your content
-+ Use R Markdown to create content
++ Use R Markdown to create content (CODE CHUNKS)
 + Integrated within RStudio (my happy place)
 + Hugo themes
-+ Not jekyll
++ Is not Jekyll / PHP
++ Agnostic to publishing platform (= portable)
 
 
 ---
@@ -373,8 +374,11 @@ knitr::include_graphics("../assets/academic-min-version.png")
 .pull-right[
 
 ```{r eval = FALSE}
-hugo_version() # is it less than the minimum version?
-update_hugo(force = TRUE) # if yes, then do this
+# is your version less than the minimum version?
+hugo_version() 
+
+# if yes, then do this
+update_hugo(force = TRUE) 
 ```
 
 then **restart R.**
