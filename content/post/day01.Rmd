@@ -22,15 +22,16 @@ Your mission, high-level, is to personalize the biography section of your new ho
 
 ![](/assets/academic-nelson.png)
 
+
 1. Open your blogdown R project, and use the serve site add-in right away. 
 
-1. In this example site, a superuser is created with the username `admin` and corresponding user profile located at `content/authors/admin/_index.md`. Open up this `_index.md` file and update the YAML front matter plus the bio after the front matter (i.e. after the last `---` line) to create *your* profile.
+1. In this example site, a superuser is created with the username `admin` and corresponding user profile located at `content/authors/admin/_index.md`. Open up this `_index.md` file and update the YAML front matter plus the bio after the front matter (i.e. after the last `---` line) to create *your* profile.^[Now is also a great time to read this [short explanation of *LiveReload*](https://bookdown.org/yihui/blogdown/a-quick-example.html)]
 
 1. Find a `.jpg` file you want to use as a profile photo. For best results, place a square cropped portrait photo named `avatar.jpg` into your profile folder at `content/authors/admin/`, overwriting the example image. 
 
 1. Attempt to update your site on Netlify (doh! this is a bit of a trick `r emo::ji("wink")`).
 
-1. Sign up for a Netlify account, using your GitHub account.
+1. Sign up for a [Netlify account](https://app.netlify.com/signup?_ga=2.169013409.1899262309.1560144481-2117076005.1540608761), using your GitHub account (see screenshots below).
 
 ![](/assets/netlify-drop-signup.png)
 
