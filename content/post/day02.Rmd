@@ -1,8 +1,9 @@
 ---
 title: "Day 02"
-subtitle: "Editing"
+subtitle: "Personalizing your site"
 author: "Alison Hill"
 date: 2019-06-11T21:13:14-05:00
+publishDate: 2019-06-10
 ---
 
 # Slides <a href="/02" target="_blank">here</a>
@@ -14,3 +15,22 @@ knitr::include_url("https://summer-of-blogdown.netlify.com/02")
 
 
 # Homework
+
+R Markdown users are usually familiar with [YAML](https://learnxinyminutes.com/docs/yaml/), a markup language designed to help you set a document's metadata by specifying key/value pairs. Hugo theme developers, on the other hand, universally use [TOML](https://learnxinyminutes.com/docs/toml/) for configuration files. Here are some key differences you may notice:
+
++ blocks wrapped by `+++` vs `---`
++ key-value pairs are separated by a `=` vs `:`
+
+
+In this homework, your high-level mission is to familiarize yourself with your `.toml` files that configure your Hugo site. 
+
+1. Open and edit the `config.toml` in the root of your project directory. This one is actually pretty sparse- the main thing I would change here is your site title, and update your baseurl from `/` to your current Netlify published url.
+
+1. Open and edit `config/_default/params.toml`. This is the fun stuff! Here are some ideas for things to change:
+    + change the *color* theme (don't forget the day/night theme button!)
+    + change the *font*
+    + ensure that <i class="fab fa-r-project"></i> code is highlighted (check out the "Hello R Markdown" post to see these changes in action)
+    + change the *highlight style* from `github` to another option listed [here](https://highlightjs.org/static/demo/) (in general, styles are in lower case and spaces are replaced by dashes so "Shades of Purple" becomes `shades-of-purple`)
+    + add a *site description* and a *sharing image* (once you push and publish your site with these changes, you can verify your shiny new twitter card [here](https://cards-dev.twitter.com/validator))
+    
+1. Open and edit `config/_default/menus.toml`- each `[[main]]` entry in this file is an element in your top navbar. Make it how you want it!

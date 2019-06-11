@@ -24,6 +24,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE,
   comment = NA, dpi = 300)
 library(magick)
 library(tidyverse)
+library(countdown)
 ```
 
 class: title-slide, top, left
@@ -58,19 +59,41 @@ class: inverse, right, middle
 [`r icon::fa("link")` alison.rbind.io](https://alison.rbind.io)  
 [`r icon::fa("paper-plane")` alison@rstudio.com](mailto:alison@rstudio.com)
 
+
 ---
-class: middle, inverse, center
+class: middle, inverse
 
-# Mission accomplished
+# Day 01 review
+
+--
+
++ Discussed `blogdown` selling points `r emo::ji("bulb")`
 
 
 --
 
-`r emo::ji("graduate")` Used [Hugo](https://gohugo.io/) via the [Academic theme](https://themes.gohugo.io/academic/) to make a website
++ Got to know our Hugo installation `r emo::ji("wave")`
 
 --
 
-`r emo::ji("computer")` Deployed site from our computer to the INTERNET
++ Used Hugo to build a website in RStudio `r emo::ji("strong")`
+
+--
+
++ Deployed a website using Netlify `r emo::ji("rocket")`
+
+--
+
++ Learned that all Hugo themes are GitHub repositories `r emo::ji("woman_shrugging")`
+
+--
+
++ Learned that when you serve site, R + Hugo = `r emo::ji("dizzy")` -> `public/` (`r emo::ji("x")` TOUCH!)
+
+--
+
++ Alison mused about the false lure of Hugo theme "simplicity" `r emo::ji("yoga")`
+
 
 ---
 class: middle, inverse, center
@@ -141,6 +164,40 @@ list_png %>%
   image_animate(fps = .5)  # animates, can opt for number of loops
 ```
 
+---
+class: middle, inverse, center
+
+![](../assets/netlify-dropped.png)
+
+https://elastic-haibt-250d4e.netlify.com
+
+
+---
+
+# Homework review
+
+
+
++ Netlify linked to GitHub?
+
++ Used the serve site add-in?
+
++ Edited `content/authors/admin/_index.md`?
+
++ Added a profile pic?
+
+--
+
+`r emo::ji("point_right")` Have we all said goodbye to <u>Nelson Bighetti</u> (at least locally)?
+
+---
+class: middle, inverse, center
+
+```{r echo = FALSE, out.width="70%"}
+knitr::include_graphics("../assets/hello-kelly.png")
+```
+
+https://elastic-haibt-250d4e.netlify.com
 
 ---
 class: inverse, middle, center
@@ -152,34 +209,6 @@ class: inverse, middle, center
 What did you notice was painful about updating your site using this method?
 
 
----
-class: middle, inverse, center
-
-# Hello & Goodbye `r emo::ji("wave")`
-
-<u>Nelson Bighetti</u>
-
----
-
-# Say my name
-
-Take about 8 minutes to do the following locally:
-
-+ Open your blogdown project and use the serve site add-in.
-
-+ Go to `content/authors/admin/`.
-
-+ Rename your profile .jpg pic `avatar.jpg` and drop it in here (say yes to replace it).
-
-+ Edit the `_index.md` to customize.
-
----
-
-1. Go to  `config/_default/params.toml`. Now have some fun! Here are some ideas:
-    + change the color theme
-    + play with the day/night theme button
-    + change the font 
-    + ensure that <i class="fab fa-r-project"></i> code is highlighted (check out the "Hello R Markdown" post to see these changes in action)
 
 ---
 class: middle, inverse, center
@@ -205,14 +234,73 @@ list_png %>%
 ```
 
 ---
+class: middle, inverse
 
-need to do 3 things: 
+# Two more steps 
 
-1. create netlify account linked to github acct
+1. Add a `netlify.toml` file
 
-1. update gitignore file
+1. Update `.gitignore` file
 
-1. add netlify.toml file
+
+---
+
+# netlify.toml file
+
+```{r eval = FALSE}
+file.create("netlify.toml")
+```
+
+--
+
+Open, then copy & paste:
+
+```js
+
+[build]
+  publish = "public"
+  command = "hugo"
+
+[context.production.environment]
+  HUGO_VERSION = "0.55.6"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+  
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.55.6"
+```
+
+
+---
+
+# .gitignore file
+
+```{r eval = FALSE}
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+public/ #<<
+.DS_Store # if a windows user, Thumbs.db instead
+```
+
+
+---
+class: middle, center
+
+# Commit + Push to GitHub
+
+.footnote[Shhh...COMMAND+A then space bar to commit all files]
+
+---
+class: middle, center
+
+# Link to GitHub in Netlify
+
+```{r echo = FALSE}
+knitr::include_graphics("../assets/netlify-repolink.png")
+```
+
 
 ---
 class: middle, inverse, center
@@ -246,9 +334,58 @@ class: inverse, middle, center
 
 Using continuous deployment, do you need to serve site before committing to GitHub?
 
+
+--
+<br>
+Answer: Yes, because Hugo doesn't understand R Markdown.
+
+Generally: 
+
+`mypost.Rmd` `r emo::ji("arrow_right")` `mypost.html`
+
+`mypost.Rmarkdown` `r emo::ji("arrow_right")` `mypost.md`
+
+
+---
+class: middle, center, inverse
+
+# Personalizing your site
+
+```{r echo = FALSE, out.width='50%'}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/4/45/Mr._Potato_Head_at_a_poolside.jpg")
+```
+
+
 ---
 
-let's start by getting a sense for the directory structure
+# This is a Hugo site
+
+```{r echo = FALSE}
+fs::dir_tree(path = "/Users/alison/rscratch/kellykapowski", recurse = FALSE, all = TRUE)
+```
+
+---
+
+# This is the content folder
+
+.pull-left[
+```{r echo = FALSE, highlight.output = 8}
+fs::dir_tree(path = "/Users/alison/rscratch/kellykapowski", recurse = FALSE, all = TRUE)
+```
+]
+
+.pull-right[
+```{r echo = FALSE}
+fs::dir_tree(path = "/Users/alison/rscratch/kellykapowski/content", recurse = FALSE, all = TRUE)
+```
+
+
++ Hugo calls these "sections"
++ Every section has a "page" (usually singular)
++ See also: the top menu navbar 
+]
+
+
 
 ---
 
@@ -256,17 +393,69 @@ class: inverse, middle, center
 
 # `r emo::ji("sparkles")` Quiz! `r emo::ji("sparkles")`
 
---
 
-With a partner, make a list of directories you should not touch in a `blogdown` project. Which files/folders *should* you touch?
+Do you have to include a blog or posts section in your `blogdown` site?
 
-.pull-left[
-## Can't touch this
-]
-
-.pull-left[
-## Do touch this
-]
 
 ---
+class: inverse, middle, center
+
+# Which content?
+
+I recommend all but `slides`! 
+
+Also, unless doing a team blog, you probably won't need to add any more `authors`.
+
+
+---
+class: middle, center, inverse
+
+# Edit content
+
+Pick any folder *other than in the `home` folder*- edit content and see what changes via **LiveReload**
+
+```{r echo = FALSE}
+countdown(minutes = 5, play_sound = TRUE)
+```
+
+
+---
+
+# This is the home folder
+
+.pull-left[
+In the academic theme, these are *widgets*:
+
++ Portable! Move the `widget.md` file to any other [page](https://sourcethemes.com/academic/docs/managing-content/#create-a-widget-page)
++ Configurable! Think: Mr. Potato Head
+
+]
+
+.pull-right[
+
+```{r echo = FALSE}
+fs::dir_tree(path = "/Users/alison/rscratch/kellykapowski/content/home", recurse = FALSE, all = TRUE)
+```
+
+]
+
+
+
+---
+class: inverse, middle, center
+
+# Edit your home page
+
+Pick your widgets- I suggest leaving them all in place but setting `active = FALSE` to remove any.
+
+```{r echo = FALSE}
+countdown(minutes = 5, play_sound = TRUE)
+```
+
+
+Bonus: move a widget to another [page](https://sourcethemes.com/academic/docs/managing-content/#create-a-widget-page). You could, for example, have the `about.md` widget be the **only** active widget on the home page.
+
+
+
+
 

@@ -3,7 +3,7 @@
 }
 
 body {
-  color: #363940;
+  color: #16436A;
 }
 
 h1 {
@@ -48,7 +48,7 @@ a:active {
 }
 
 .remark-code {
-  color: #95C04C;
+  color: #16436A;
 }
 
 .remark-inline-code { 
@@ -56,7 +56,7 @@ a:active {
 }
 
 .remark-code-line-highlighted { 
-  background-color: #84d6d3; 
+  background-color: #A9E1BA; 
 }
 
 .inverse {
