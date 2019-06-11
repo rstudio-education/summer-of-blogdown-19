@@ -446,7 +446,12 @@ fs::dir_tree(path = "/Users/alison/rscratch/kellykapowski/content/home", recurse
 
 ]
 
+---
+class: inverse, middle, center
 
+# Widgets
+
+![](https://media.giphy.com/media/3orifd2IjZjWVkpC4o/giphy.gif)
 
 ---
 class: inverse, middle, center
