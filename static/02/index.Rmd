@@ -303,6 +303,7 @@ knitr::include_graphics("../assets/netlify-repolink.png")
 
 
 ---
+class: inverse, middle, center
 
 ![](https://media.giphy.com/media/3kwdkOihSMl7JCi37m/giphy.gif)
 
