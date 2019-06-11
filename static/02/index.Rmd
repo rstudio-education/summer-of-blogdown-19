@@ -303,6 +303,12 @@ knitr::include_graphics("../assets/netlify-repolink.png")
 
 
 ---
+
+![](https://media.giphy.com/media/3kwdkOihSMl7JCi37m/giphy.gif)
+
+https://app.netlify.com/sites/elastic-haibt-250d4e/deploys
+
+---
 class: middle, inverse, center
 
 # Mission accomplished
@@ -448,6 +454,9 @@ class: inverse, middle, center
 
 Pick your widgets- I suggest leaving them all in place but setting `active = FALSE` to remove any.
 
+
+If you delete, they are always in: `themes/hugo-academic/exampleSite/content/home`
+
 ```{r echo = FALSE}
 countdown(minutes = 5, play_sound = TRUE)
 ```
@@ -458,4 +467,10 @@ Bonus: move a widget to another [page](https://sourcethemes.com/academic/docs/ma
 
 
 
+
+---
+
+# Go Deeper
+
+Read more of the [docs](https://sourcethemes.com/academic/docs/page-builder/#personalizing-widgets) for personalizing widgets.
 

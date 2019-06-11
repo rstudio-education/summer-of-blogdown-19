@@ -25,12 +25,19 @@ publishDate: 2019-06-10
 <li><p>Open and edit the <code>config.toml</code> in the root of your project directory. This one is actually pretty sparse- the main thing I would change here is your site title, and update your baseurl from <code>/</code> to your current Netlify published url.</p></li>
 <li>Open and edit <code>config/_default/params.toml</code>. This is the fun stuff! Here are some ideas for things to change:
 <ul>
-<li>change the <em>color</em> theme (don’t forget the day/night theme button!)</li>
-<li>change the <em>font</em></li>
+<li>change the <em>color</em> theme (don’t forget the day/night theme button!)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+<li>change the <em>font</em><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></li>
 <li>ensure that <i class="fab fa-r-project"></i> code is highlighted (check out the “Hello R Markdown” post to see these changes in action)</li>
 <li>change the <em>highlight style</em> from <code>github</code> to another option listed <a href="https://highlightjs.org/static/demo/">here</a> (in general, styles are in lower case and spaces are replaced by dashes so “Shades of Purple” becomes <code>shades-of-purple</code>)</li>
 <li>add a <em>site description</em> and a <em>sharing image</em> (once you push and publish your site with these changes, you can verify your shiny new twitter card <a href="https://cards-dev.twitter.com/validator">here</a>)</li>
 </ul></li>
 <li><p>Open and edit <code>config/_default/menus.toml</code>- each <code>[[main]]</code> entry in this file is an element in your top navbar. Make it how you want it!</p></li>
+</ol>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>You could also make your own <a href="https://github.com/rbind/apreshill/blob/master/data/themes/alison.toml">custom color theme</a>; file placement here is <strong>critical</strong><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>You could also make your own <a href="https://github.com/rbind/apreshill/blob/master/data/fonts/alison.toml">custom font theme</a>; again, file placement is <strong>critical</strong><a href="#fnref2" class="footnote-back">↩</a></p></li>
 </ol>
 </div>

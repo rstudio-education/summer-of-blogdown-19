@@ -27,8 +27,8 @@ In this homework, your high-level mission is to familiarize yourself with your `
 1. Open and edit the `config.toml` in the root of your project directory. This one is actually pretty sparse- the main thing I would change here is your site title, and update your baseurl from `/` to your current Netlify published url.
 
 1. Open and edit `config/_default/params.toml`. This is the fun stuff! Here are some ideas for things to change:
-    + change the *color* theme (don't forget the day/night theme button!)
-    + change the *font*
+    + change the *color* theme (don't forget the day/night theme button!)^[You could also make your own [custom color theme](https://github.com/rbind/apreshill/blob/master/data/themes/alison.toml); file placement here is **critical**]
+    + change the *font*^[You could also make your own [custom font theme](https://github.com/rbind/apreshill/blob/master/data/fonts/alison.toml); again, file placement is **critical**]
     + ensure that <i class="fab fa-r-project"></i> code is highlighted (check out the "Hello R Markdown" post to see these changes in action)
     + change the *highlight style* from `github` to another option listed [here](https://highlightjs.org/static/demo/) (in general, styles are in lower case and spaces are replaced by dashes so "Shades of Purple" becomes `shades-of-purple`)
     + add a *site description* and a *sharing image* (once you push and publish your site with these changes, you can verify your shiny new twitter card [here](https://cards-dev.twitter.com/validator))
