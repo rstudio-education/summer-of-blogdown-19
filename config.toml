@@ -44,6 +44,10 @@ footnotereturnlinkcontents = "↩"
     name = "Google Doc"
     url = "https://docs.google.com/document/d/1Udr1ImgS-M8_c4qRRKG7eqJGs4_CXnBjM-WFBRXYTF0/edit?usp=sharing"
     weight = 8
+[[menu.main]]
+    name = "Kelly Kapowski Demo Site"
+    url = "https://elastic-haibt-250d4e.netlify.com/"
+    weight = 9
 
 [params]
     description = "A week of blogdown for RStudio's summer 2019 interns."
