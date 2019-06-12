@@ -365,10 +365,12 @@ if (file.exists(rprofile)) {
 
 # Page Bundles
 
+In the academic theme, any image files named `featured.*` get a special status on the list/single pages- but you can add any other images to a bundle (and therefore a post) too.
+
 
 .pull-left[
 
-## before bundles
+before bundles
 
 ```{r eval = FALSE}
 content/
@@ -376,17 +378,18 @@ content/
 │   ├── index.md
 ├── post
 │   ├── my-post.md
-│   └── my-other-post.mD
+│   └── my-other-post.md
 ├── static
-│   ├── my-post.jpg
-│   └── other-image.png
+│   ├── featured-my-post.jpg
+│   └── featured-my-other-post.png
+│   └── otherimage-my-other-post.jpg
 ```
 
 ]
 
 .pull-right[
 
-## after bundles
+after bundles
 
 ```{r eval = FALSE}
 content/
@@ -394,11 +397,12 @@ content/
 │   ├── index.md
 ├── post
 │   ├── my-post
-│   │   ├── my-post.jpg
+│   │   ├── featured.jpg
 │   │   └── index.md
 │   └── my-other-post
-│   │   ├── other-image.png
-│       └── index.md
+│   │   ├── featured.png
+│   │   ├── other-image.jpg
+│   │   └── index.md
 ```
 
 ]
