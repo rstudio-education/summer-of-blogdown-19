@@ -17,15 +17,32 @@ publishDate: 2019-06-11T21:13:14-05:00
 <div id="homework" class="section level1">
 <h1>Homework</h1>
 <ol style="list-style-type: decimal">
-<li><p>Add some type of new content in a <code>.Rmd</code> file- pick one of the academic theme’s archetypes and run with it! (make sure it is <em>bundled</em>)</p></li>
-<li><p>Add some R code to your content. Using a built-in dataset (bore us here), make a simple plot using your favorite plotting package (for tidyverse team members, bonus points for using <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a> + <a href="https://gganimate.com/"><code>gganimate</code></a>!)</p></li>
-<li>Now, to that new content, embed an image using <em>relative links</em>. Here are some <a href="https://unsplash.com/">good ones</a>, if you need a quick download. Try including an image using:
+<li><p>Follow instructions in this <a href="https://alison.rbind.io/post/2019-02-21-hugo-page-bundles/">blog post</a> to activate page bundles in your <code>blogdown</code> project using a project <code>.Rprofile</code> file (2 gotchas: new empty line at the end of the file, and restart R for changes to take effect).</p></li>
+<li><p>In your <code>config.toml</code> file, update your <code>permalinks</code> as follows:</p></li>
+</ol>
+<pre class="js"><code>[permalinks]
+# for optimists who plan to blog a lot
+    post = &quot;/post/:year/:month/:day/:slug/&quot; 
+# for realists who know that you won&#39;t have multiple posts per day (or maybe even month)
+    post = &quot;/post/:year/:slug/&quot; </code></pre>
+<ol style="list-style-type: decimal">
+<li>Use the new post add-in (see figure <a href="#fig:addin">1</a>) to create a new <code>.Rmd</code> post bundle- pick one of the academic theme’s archetypes and run with it! (make triple-sure it is, in fact, <em>bundled</em>)</li>
+</ol>
+<div class="figure"><span id="fig:addin"></span>
+<img src="../assets/kelly-newpost.png" alt="The new post add-in" width="80%" />
+<p class="caption">
+Figure 1: The new post add-in
+</p>
+</div>
+<ol style="list-style-type: decimal">
+<li><p>Add some R code to your post. Using a built-in dataset (bore us here), make a simple plot using your favorite plotting package (for tidyverse team members, bonus points for using <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a> + <a href="https://gganimate.com/"><code>gganimate</code></a>!)</p></li>
+<li>Now, to that new post, embed a bundled image using <em>relative links</em>. Here are some <a href="https://unsplash.com/">good ones</a>, if you need a quick download. Try including an image using:
 <ul>
 <li>markdown syntax, and</li>
 <li>in a code chunk using <code>knitr::include_graphics()</code>.</li>
 </ul></li>
-<li><p>In your new content, add a link to another section of your blog, using <em>relative links</em>.</p></li>
-<li><p>Finally, in an <code>.Rmd</code> file somewhere in your project, read in a data file.</p></li>
+<li><p>In your new post, add a link to another section of your blog, using <em>relative links</em>.</p></li>
+<li><p>Finally, in your new post, read in a data file (also considered part of the “bundle”!) and do something with it simple (plot, <code>dplyr::glimpse</code>, use an HTML widget like <a href="https://rstudio.github.io/DT/">DT</a>).</p></li>
 </ol>
 </div>
 <div id="extra" class="section level1">

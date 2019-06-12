@@ -280,6 +280,7 @@ countdown(minutes = 5, play_sound = TRUE)
 Two ways (to an image in `static/img/`)
 
 --
+names: images
 
 .pull-left[
 
@@ -367,19 +368,15 @@ if (file.exists(rprofile)) {
 
 .pull-left[
 
-## pre-bundles
+## before bundles
 
 ```{r eval = FALSE}
 content/
 ├── about
 │   ├── index.md
 ├── post
-│   ├── my-post
-│   │   ├── my-post.jpg
-│   │   └── index.md
-│   └── my-other-post
-│   │   ├── other-image.png
-│       └── index.md
+│   ├── my-post.md
+│   └── my-other-post.mD
 ├── static
 │   ├── my-post.jpg
 │   └── other-image.png
@@ -389,7 +386,7 @@ content/
 
 .pull-right[
 
-## post-bundles
+## after bundles
 
 ```{r eval = FALSE}
 content/
