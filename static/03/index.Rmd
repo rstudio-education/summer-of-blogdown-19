@@ -92,20 +92,53 @@ class: middle, inverse
 
 + Alison mused about the false lure of Hugo theme "simplicity" `r emo::ji("yoga")`
 
+
+---
+
+# Day 02 homework review
+
+--
+
++ the `config.toml`- what changed here? ([docs](https://gohugo.io/getting-started/configuration/#all-configuration-settings))
+
+--
+
++ `config/_default/params.toml`- what changed here? ([docs](https://gohugo.io/variables/site/#the-site-params-variable))
+
+--
+
++ `config/_default/menus.toml`- what changed here? ([docs](https://gohugo.io/content-management/menus/#add-non-content-entries-to-a-menu))
+
 ---
 class: middle, inverse
 
 # Day 02 review
 
+--
+
 + Used version control via GitHub
+
+--
 
 + Used continuous deployment via Netlify
 
+--
+
 + Personalized your `about.md` page (social links, bio, interests, education)
+
+--
 
 + Practiced making changes, serving site, push to GitHub, + `r emo::ji("boom")` deploy
 
+--
+
 + Learned a bit about Hugo `content/` `r emo::ji("right_arrow")` sections `r emo::ji("right_arrow")` pages
+
+--
+
++ Learned a bit about TOML vs YAML `r emo::ji("sweet_potato")`
+
+--
 
 + Played with turning widgets on and off a la Mr. Potato Head `r emo::ji("potato")`
 
@@ -115,6 +148,13 @@ class: inverse, middle, center
 # Widgets
 
 ![](https://media.giphy.com/media/3orifd2IjZjWVkpC4o/giphy.gif)
+
+---
+class: inverse, middle, center
+
+--
+
+# The hard part is not the <i class="fab fa-r-project"></i> part...
 
 ---
 
@@ -130,19 +170,37 @@ class: inverse, middle, center
 
 ---
 
-# Day 02 homework
+class: inverse, middle
 
---
+# .center[`r emo::ji("sparkles")` Quiz! `r emo::ji("sparkles")`]
 
-+ the `config.toml`- what changed here?
+Take a look at two links:
 
---
++ My example site for [Kelly Kapowski](https://elastic-haibt-250d4e.netlify.com/)
 
-+ `config/_default/params.toml`- what changed here?
++ My [content folder](https://github.com/apreshill/kellykapowski/tree/master/content)
 
---
+Figure out the site link that shows you the following content:
 
-+ `config/_default/menus.toml`- what changed here?
+```{r eval = FALSE}
+.
+├── authors/            # => ?
+├── authors/jessie      # => ?
+├── authors/kelly       # => ?
+├── authors/lisa        # => ?
+├── book                # => ?
+├── book/cookbook       # => ?
+└── home/               # => ?
+```
+
+
+
+```{r echo = FALSE}
+countdown(minutes = 5, play_sound = TRUE,
+          color_background = "#95C04C",
+          color_running_background = "#A9E1BA")
+```
+
 
 
 
@@ -162,10 +220,86 @@ In pairs, please view each others' sites-discuss the following and add to the sh
 1. After 2 days working on your site, what do you understand now about `blogdown`/Hugo/Netlify that confused you at first?
 
 ```{r echo = FALSE}
-countdown(minutes = 10, play_sound = TRUE,
-          color_background = "#95C04C",
-          color_running_background = "#A9E1BA")
+countdown(minutes = 10, play_sound = TRUE)
 ```
+
+---
+class: inverse, middle, center
+
+# Let's edit some content
+
+---
+
+# Things you probably care about
+
+--
+
+1. Linking within your site to other parts of your site
+
+--
+
+1. Adding images (where does the file go?)
+
+--
+
+1. Adding data (where does the file go?)
+
+---
+
+# Relative internal links
+
+All URLS are relative from where you (not from your project root, sadly).
+
+
+
+To go up a level from <i class="fas fa-map-pin"></i>: `../`
+
+---
+class: middle, inverse
+
+# Test out relative links
+
+Go into your single `.Rmd` post and try these out:
+
++ `[text](../seehere)` `r emo::ji("right_arrow")` links to another post 
+
++ `[text](../../book)` `r emo::ji("right_arrow")` links to other content (not home page) 
+
++ `[text](../../#about)` `r emo::ji("right_arrow")` links to other content on home page 
+
++ `[text](../../img/hero-academic.png` `r emo::ji("right_arrow")` links to a file in your `static/` directory 
+
+```{r echo = FALSE}
+countdown(minutes = 5, play_sound = TRUE)
+```
+
+---
+
+# Adding images
+
+Two ways (to an image in `static/img/`)
+
+--
+
+.pull-left[
+
+## Way 1: markdown
+
+`![alt text here](../../img/hero-academic.png)`
+
+]
+
+--
+
+.pull-right[
+
+## Way 2: `knitr`
+
+```{r echo = TRUE, eval = FALSE}
+knitr::include_graphics("../../img/hero-academic.png")
+```
+
+]
 
 ---
 class: middle, center, inverse
@@ -175,6 +309,11 @@ class: middle, center, inverse
 ---
 
 # Use the new post add-in
+
+```{r echo = FALSE}
+
+```
+
 
 ![](../assets/kelly-newpost.png)
 
@@ -266,10 +405,9 @@ content/
 
 now actually add some new content!
 
+
+
 ---
-
-
-
 
 
 permalinks
