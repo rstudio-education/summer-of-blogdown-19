@@ -41,7 +41,7 @@ knitr::include_url("https://summer-of-blogdown.netlify.com/03")
     + markdown syntax, and 
     + in a code chunk using `knitr::include_graphics()`.
 
-1. In your new post, add a link to another section of your blog, using *relative links*.
+1. In your new post, add a link to another section of your website (i.e., another section in your `content/`), using *relative links*.
 
 1. Finally, in your new post, read in a data file (also considered part of the "bundle"!) and do something with it simple (plot, `dplyr::glimpse`, use an HTML widget like [DT](https://rstudio.github.io/DT/)).
 
