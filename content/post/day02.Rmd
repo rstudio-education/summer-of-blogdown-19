@@ -34,3 +34,23 @@ In this homework, your high-level mission is to familiarize yourself with your `
     + add a *site description* and a *sharing image* (once you push and publish your site with these changes, you can verify your shiny new twitter card [here](https://cards-dev.twitter.com/validator))
     
 1. Open and edit `config/_default/menus.toml`- each `[[main]]` entry in this file is an element in your top navbar. Make it how you want it!
+
+
+# Review
+
+
++ Used version control via GitHub
+
+
++ Used continuous deployment via Netlify
+
++ Personalized your `about.md` page (social links, bio, interests, education)
+
+
++ Practiced making changes, serving site, push to GitHub, + `r emo::ji("boom")` deploy
+
++ Learned a bit about Hugo `content/` `r emo::ji("right_arrow")` sections `r emo::ji("right_arrow")` pages
+
++ Learned a bit about TOML vs YAML `r emo::ji("sweet_potato")`
+
++ Played with turning widgets on and off a la Mr. Potato Head `r emo::ji("potato")`

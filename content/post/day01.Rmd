@@ -46,4 +46,31 @@ Want more?...
 
 1. Look at the upper menu navbar- what menu items do you want? What is missing? Make a list!
 
+# Review
 
+
+
++ Discussed `blogdown` selling points `r emo::ji("bulb")`
+
+
++ Got to know our Hugo installation `r emo::ji("wave")`
+
+
+
++ Used Hugo to build a website in RStudio `r emo::ji("strong")`
+
+
+
++ Deployed a website using Netlify `r emo::ji("rocket")`
+
+
+
++ Learned that all Hugo themes are GitHub repositories `r emo::ji("woman_shrugging")`
+
+
+
++ Learned that when you serve site, R + Hugo = `r emo::ji("dizzy")` -> `public/` (`r emo::ji("x")` TOUCH!)
+
+
+
++ Alison mused about the false lure of Hugo theme "simplicity" `r emo::ji("yoga")`
