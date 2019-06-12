@@ -81,7 +81,7 @@ class: middle, inverse
 
 
 
-+ Alison mused about the false lure of Hugo theme "simplicity" 🧘
++ Alison mused about the false lure of Hugo theme "simplicity" 🧘‍♀️
 
 
 ---
@@ -171,23 +171,23 @@ Take a look at two links:
 
 + My [content folder](https://github.com/apreshill/kellykapowski/tree/master/content)
 
-Figure out the site link that shows you the following content:
+Figure out the URL needed to access the content below:
 
 
 ```r
 .
-├── authors/            # =&gt; ?
-├── authors/jessie      # =&gt; ?
-├── authors/kelly       # =&gt; ?
-├── authors/lisa        # =&gt; ?
-├── book                # =&gt; ?
-├── book/cookbook       # =&gt; ?
+├── authors/            # =&gt; https://elastic-haibt-250d4e.netlify.com/?
+├── authors/jessie.md   # =&gt; https://elastic-haibt-250d4e.netlify.com/?
+├── authors/kelly.md    # =&gt; https://elastic-haibt-250d4e.netlify.com/?
+├── authors/lisa.md     # =&gt; https://elastic-haibt-250d4e.netlify.com/?
+├── book                # =&gt; https://elastic-haibt-250d4e.netlify.com/?
+├── book/cookbook.md    # =&gt; https://elastic-haibt-250d4e.netlify.com/?
 └── home/               # =&gt; ?
 ```
 
 
 
-<div class="countdown" id="timer_5d011e99" style="right:0;bottom:0;" data-audio="true">
+<div class="countdown" id="timer_5d012c90" style="right:0;bottom:0;" data-audio="true">
 <code><span class="digits minutes">05</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
 </div>
 
@@ -209,7 +209,7 @@ In pairs, please view each others' sites-discuss the following and add to the sh
 
 1. After 2 days working on your site, what do you understand now about `blogdown`/Hugo/Netlify that confused you at first?
 
-<div class="countdown" id="timer_5d011f7c" style="right:0;bottom:0;" data-audio="true">
+<div class="countdown" id="timer_5d012dba" style="right:0;bottom:0;" data-audio="true">
 <code><span class="digits minutes">10</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
 </div>
 
@@ -259,7 +259,7 @@ Go into your single `.Rmd` post and try these out:
 
 + `[text](../../img/hero-academic.png` ➡️ links to a file in your `static/` directory 
 
-<div class="countdown" id="timer_5d011ff7" style="right:0;bottom:0;" data-audio="true">
+<div class="countdown" id="timer_5d012aec" style="right:0;bottom:0;" data-audio="true">
 <code><span class="digits minutes">05</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
 </div>
 
@@ -301,10 +301,9 @@ class: middle, center, inverse
 
 # Use the new post add-in
 
+&lt;img src="../assets/kelly-newpost.png" width="50%" /&gt;
 
 
-
-![](../assets/kelly-newpost.png)
 
 ---
 
@@ -324,7 +323,7 @@ library(usethis)
 edit_r_profile(scope = "project")
 ```
 
-Then add this line (make sure new line at end)...
+Then add this line (make sure new line at end + restart R)...
 
 
 ```r
@@ -360,6 +359,8 @@ if (file.exists(rprofile)) {
 
 .pull-left[
 
+## pre-bundles
+
 
 ```r
 content/
@@ -372,13 +373,16 @@ content/
 │   └── my-other-post
 │   │   ├── other-image.png
 │       └── index.md
+├── static
+│   ├── my-post.jpg
+│   └── other-image.png
 ```
 
 ]
 
 .pull-right[
 
-# post-bundles
+## post-bundles
 
 
 ```r
@@ -395,28 +399,6 @@ content/
 ```
 
 ]
----
-
-now actually add some new content!
-
-
-
----
-
-
-permalinks
-
-the hard part is not the r part
-
-learning bookdown elements too
-
-cross-references with relative urls
-
-adding images
-
-data files
-
-later-adding other output formats
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

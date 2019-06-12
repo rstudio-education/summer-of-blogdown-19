@@ -16,11 +16,11 @@ knitr::include_url("https://summer-of-blogdown.netlify.com/03")
 
 # Homework
 
-1. Add some type of new content in a `.Rmd` file- pick one of the academic theme's archetypes and run with it!
+1. Add some type of new content in a `.Rmd` file- pick one of the academic theme's archetypes and run with it! (make sure it is *bundled*)
 
 1. Add some R code to your content. Using a built-in dataset (bore us here), make a simple plot using your favorite plotting package (for tidyverse team members, bonus points for using [`ggplot2`](https://ggplot2.tidyverse.org/) + [`gganimate`](https://gganimate.com/)!)
 
-1. Now, to that new content, embed an image. Here are some [good ones](https://unsplash.com/), if you need a quick download. Try including an image using:
+1. Now, to that new content, embed an image using *relative links*. Here are some [good ones](https://unsplash.com/), if you need a quick download. Try including an image using:
     + markdown syntax, and 
     + in a code chunk using `knitr::include_graphics()`.
 

@@ -180,16 +180,16 @@ Take a look at two links:
 
 + My [content folder](https://github.com/apreshill/kellykapowski/tree/master/content)
 
-Figure out the site link that shows you the following content:
+Figure out the URL needed to access the content below:
 
 ```{r eval = FALSE}
 .
-├── authors/            # => ?
-├── authors/jessie      # => ?
-├── authors/kelly       # => ?
-├── authors/lisa        # => ?
-├── book                # => ?
-├── book/cookbook       # => ?
+├── authors/            # => https://elastic-haibt-250d4e.netlify.com/?
+├── authors/jessie.md   # => https://elastic-haibt-250d4e.netlify.com/?
+├── authors/kelly.md    # => https://elastic-haibt-250d4e.netlify.com/?
+├── authors/lisa.md     # => https://elastic-haibt-250d4e.netlify.com/?
+├── book                # => https://elastic-haibt-250d4e.netlify.com/?
+├── book/cookbook.md    # => https://elastic-haibt-250d4e.netlify.com/?
 └── home/               # => ?
 ```
 
@@ -310,12 +310,11 @@ class: middle, center, inverse
 
 # Use the new post add-in
 
-```{r echo = FALSE}
-
+```{r echo = FALSE, out.width="50%"}
+knitr::include_graphics("../assets/kelly-newpost.png")
 ```
 
 
-![](../assets/kelly-newpost.png)
 
 ---
 
@@ -334,7 +333,7 @@ library(usethis)
 edit_r_profile(scope = "project")
 ```
 
-Then add this line (make sure new line at end)...
+Then add this line (make sure new line at end + restart R)...
 
 ```{r eval = FALSE}
 options(blogdown.new_bundle = TRUE)
@@ -368,6 +367,8 @@ if (file.exists(rprofile)) {
 
 .pull-left[
 
+## pre-bundles
+
 ```{r eval = FALSE}
 content/
 ├── about
@@ -379,13 +380,16 @@ content/
 │   └── my-other-post
 │   │   ├── other-image.png
 │       └── index.md
+├── static
+│   ├── my-post.jpg
+│   └── other-image.png
 ```
 
 ]
 
 .pull-right[
 
-# post-bundles
+## post-bundles
 
 ```{r eval = FALSE}
 content/
@@ -401,27 +405,6 @@ content/
 ```
 
 ]
----
 
-now actually add some new content!
-
-
-
----
-
-
-permalinks
-
-the hard part is not the r part
-
-learning bookdown elements too
-
-cross-references with relative urls
-
-adding images
-
-data files
-
-later-adding other output formats
 
 
