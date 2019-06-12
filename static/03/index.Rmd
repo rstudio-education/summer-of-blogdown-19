@@ -1,0 +1,289 @@
+---
+title: "Summer of Blogdown"
+subtitle: "day 03"
+author: Alison Hill
+output:
+  xaringan::moon_reader:
+    css: ["default", "../assets/my-theme.css", "../assets/my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "https://platform.twitter.com/widgets.js"
+    includes:
+      in_header: header.html  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
+  comment = NA, dpi = 300)
+library(magick)
+library(tidyverse)
+library(countdown)
+```
+
+class: title-slide, top, left
+background-image: url(../assets/edoardo-busti-297725-unsplash.jpg)
+background-size: cover
+
+<div class="module mid">
+  <h4>`r rmarkdown::metadata$subtitle`</h2>
+</div>
+
+# `r rmarkdown::metadata$title`
+
+### `r rmarkdown::metadata$author`
+
+
+
+.footnote[
+<img src="../assets/RStudio-Logo-White.png" alt="rstudio" style="float:left;width:150px;"/>
+]
+
+---
+name: hello
+class: inverse, right, middle
+
+
+<img style="border-radius: 50%;" src="https://github.com/apreshill.png" width="150px"/>
+
+# Find me at...
+
+[`r icon::fa("twitter")` @apreshill](http://twitter.com/apreshill)  
+[`r icon::fa("github")` @apreshill](http://github.com/apreshill)  
+[`r icon::fa("link")` alison.rbind.io](https://alison.rbind.io)  
+[`r icon::fa("paper-plane")` alison@rstudio.com](mailto:alison@rstudio.com)
+
+
+---
+class: middle, inverse
+
+# Day 01 review
+
+
+
++ Discussed `blogdown` selling points `r emo::ji("bulb")`
+
+
++ Got to know our Hugo installation `r emo::ji("wave")`
+
+
+
++ Used Hugo to build a website in RStudio `r emo::ji("strong")`
+
+
+
++ Deployed a website using Netlify `r emo::ji("rocket")`
+
+
+
++ Learned that all Hugo themes are GitHub repositories `r emo::ji("woman_shrugging")`
+
+
+
++ Learned that when you serve site, R + Hugo = `r emo::ji("dizzy")` -> `public/` (`r emo::ji("x")` TOUCH!)
+
+
+
++ Alison mused about the false lure of Hugo theme "simplicity" `r emo::ji("yoga")`
+
+---
+class: middle, inverse
+
+# Day 02 review
+
++ Used version control via GitHub
+
++ Used continuous deployment via Netlify
+
++ Personalized your `about.md` page (social links, bio, interests, education)
+
++ Practiced making changes, serving site, push to GitHub, + `r emo::ji("boom")` deploy
+
++ Learned a bit about Hugo `content/` `r emo::ji("right_arrow")` sections `r emo::ji("right_arrow")` pages
+
++ Played with turning widgets on and off a la Mr. Potato Head `r emo::ji("potato")`
+
+---
+class: inverse, middle, center
+
+# Widgets
+
+![](https://media.giphy.com/media/3orifd2IjZjWVkpC4o/giphy.gif)
+
+---
+
+# Hugo Pages
+
+
+```
+.
+├── authors/            # => https://example.com/authors/
+├── example/index.md    # => https://example.com/example/
+└── home/               # => https://example.com/
+```
+
+---
+
+# Day 02 homework
+
+--
+
++ the `config.toml`- what changed here?
+
+--
+
++ `config/_default/params.toml`- what changed here?
+
+--
+
++ `config/_default/menus.toml`- what changed here?
+
+
+
+---
+class: inverse
+
+# Let's chat for 10 minutes! 
+
+In pairs, please view each others' sites-discuss the following and add to the shared google doc:
+
+1. What do you love about your site? (pleased with colors? widgets?)
+
+1. What bugs you about your site? (something you couldn't quite get right?)
+
+1. What do you feel like we have glossed over so far that you really want to know or better understand?
+
+1. After 2 days working on your site, what do you understand now about `blogdown`/Hugo/Netlify that confused you at first?
+
+```{r echo = FALSE}
+countdown(minutes = 10, play_sound = TRUE,
+          color_background = "#95C04C",
+          color_running_background = "#A9E1BA")
+```
+
+---
+class: middle, center, inverse
+
+# Let's add new content!
+
+---
+
+# Use the new post add-in
+
+![](../assets/kelly-newpost.png)
+
+---
+
+# Page bundles
+
+We need to activate page bundles to be less frustrating
+
+https://alison.rbind.io/post/2019-02-21-hugo-page-bundles/
+
+---
+
+# Activate page bundles
+
+```{r eval = FALSE}
+library(usethis)
+edit_r_profile(scope = "project")
+```
+
+Then add this line (make sure new line at end)...
+
+```{r eval = FALSE}
+options(blogdown.new_bundle = TRUE)
+```
+
+---
+
+
+
+Heck, while we are at it (new line at end! + restart R)...
+
+```{r}
+options(blogdown.author = "Kelly Kapowski",
+        blogdown.ext = ".Rmd",
+        blogdown.subdir = "post",
+        blogdown.yaml.empty = TRUE,
+        blogdown.new_bundle = TRUE,
+        blogdown.title_case = TRUE)
+
+rprofile <- Sys.getenv("R_PROFILE_USER", "~/.Rprofile")
+
+if (file.exists(rprofile)) {
+  source(file = rprofile)
+}
+```
+
+---
+
+# Page Bundles
+
+
+.pull-left[
+
+```{r eval = FALSE}
+content/
+├── about
+│   ├── index.md
+├── post
+│   ├── my-post
+│   │   ├── my-post.jpg
+│   │   └── index.md
+│   └── my-other-post
+│   │   ├── other-image.png
+│       └── index.md
+```
+
+]
+
+.pull-right[
+
+# post-bundles
+
+```{r eval = FALSE}
+content/
+├── about
+│   ├── index.md
+├── post
+│   ├── my-post
+│   │   ├── my-post.jpg
+│   │   └── index.md
+│   └── my-other-post
+│   │   ├── other-image.png
+│       └── index.md
+```
+
+]
+---
+
+now actually add some new content!
+
+---
+
+
+
+
+
+permalinks
+
+the hard part is not the r part
+
+learning bookdown elements too
+
+cross-references with relative urls
+
+adding images
+
+data files
+
+later-adding other output formats
+
+

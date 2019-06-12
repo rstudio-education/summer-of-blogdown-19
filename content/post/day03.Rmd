@@ -1,8 +1,37 @@
 ---
 title: "Day 03"
-subtitle: "Customization"
+subtitle: "Keeping up with your content"
 author: "Alison Hill"
 date: 2019-06-12T21:13:14-05:00
 ---
 
-not yet!
+# Slides <a href="/03" target="_blank">here</a>
+
+```{r echo = FALSE}
+knitr::include_url("https://summer-of-blogdown.netlify.com/03")
+```
+
+[Link to our discussion doc](https://docs.google.com/document/d/1Udr1ImgS-M8_c4qRRKG7eqJGs4_CXnBjM-WFBRXYTF0/edit#heading=h.tqen04nraw7u)
+
+# Homework
+
+1. Add some type of new content in a `.Rmd` file- pick one of the academic theme's archetypes and run with it!
+
+1. Add some R code to your content. Using a built-in dataset (bore us here), make a simple plot using your favorite plotting package (for tidyverse team members, bonus points for using [`ggplot2`](https://ggplot2.tidyverse.org/) + [`gganimate`](https://gganimate.com/)!)
+
+1. Now, to that new content, embed an image. Here are some [good ones](https://unsplash.com/), if you need a quick download. Try including an image using:
+    + markdown syntax, and 
+    + in a code chunk using `knitr::include_graphics()`.
+
+1. In your new content, add a link to another section of your blog, using *relative links*.
+
+1. Finally, in an `.Rmd` file somewhere in your project, read in a data file.
+
+# Extra
+
+Try out *any* [`bookdown` components](https://bookdown.org/yihui/bookdown/components.html) within `blogdown` like: 
+
++ [citations](https://blogdown-demo.rbind.io/2017/08/28/adding-citations-to-posts/), 
++ [HTML widgets](https://blogdown-demo.rbind.io/2017/09/07/adding-htmlwidgets-to-r-markdown-posts/)
++ [figures with a caption](https://blogdown-demo.rbind.io/2017/10/06/adding-figures-and-other-images-to-posts/)
++ [cross-references](https://bookdown.org/yihui/bookdown/cross-references.html)
