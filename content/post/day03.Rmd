@@ -3,6 +3,7 @@ title: "Day 03"
 subtitle: "Keeping up with your content"
 author: "Alison Hill"
 date: 2019-06-12T21:13:14-05:00
+publishDate: 2019-06-11T21:13:14-05:00
 ---
 
 # Slides <a href="/03" target="_blank">here</a>
