@@ -18,7 +18,7 @@ knitr::include_url("https://summer-of-blogdown.netlify.com/03")
 
 1. Follow instructions in this [blog post](https://alison.rbind.io/post/2019-02-21-hugo-page-bundles/) to activate page bundles in your `blogdown` project using a project `.Rprofile` file (2 gotchas: new empty line at the end of the file, and restart R for changes to take effect).
 
-1. In your `config.toml` file, update your `permalinks` as follows (also more advice on permalinks in this great post on a ["new post workflow"](https://www.garrickadenbuie.com/blog/blogdown-netlify-new-post-workflow/):
+1. In your `config.toml` file, update your `permalinks` as follows (also more advice on permalinks in this great post on a ["new post workflow"](https://www.garrickadenbuie.com/blog/blogdown-netlify-new-post-workflow/) by [Garrick Aden-Buie](https://twitter.com/grrrck)):
 
     ```js
     [permalinks]
