@@ -29,13 +29,13 @@ knitr::include_url("https://summer-of-blogdown.netlify.com/03")
 ```
 
 
-1. Use the new post add-in (see figure \@ref(fig:addin)) to create a new `.Rmd` post bundle- pick one of the academic theme's archetypes and run with it! (make triple-sure it is, in fact, *bundled*)
+1. Use the new post add-in (see figure \@ref(fig:addin)) to create a new `.Rmd` post bundle and run with it! (carefully `r emo::ji("wink")` make triple-sure it is, in fact, *bundled*)
 
 ```{r addin, echo = FALSE, out.width="80%", fig.cap = "The new post add-in"}
 knitr::include_graphics("../assets/kelly-newpost.png")
 ```
 
-1. Add some R code to your post. Using a built-in dataset (bore us here), make a simple plot using your favorite plotting package (for tidyverse team members, bonus points for using [`ggplot2`](https://ggplot2.tidyverse.org/) + [`gganimate`](https://gganimate.com/)!)
+1. Add some R code to your post. Using a built-in dataset (bore us here: `iris` works just fine), make a simple plot using your favorite plotting package (for tidyverse team members, bonus points for using [`ggplot2`](https://ggplot2.tidyverse.org/) + [`gganimate`](https://gganimate.com/)!)
 
 1. Now, to that new post, embed a bundled image using *relative links*. Here are some [good ones](https://unsplash.com/), if you need a quick download. Try including an image using:
     + markdown syntax, and 
