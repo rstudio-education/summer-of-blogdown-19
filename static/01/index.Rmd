@@ -275,7 +275,9 @@ knitr::include_graphics("../assets/flow01-summer-blogdown-github.png")
 
 
 
-Make a [repo on <i class="fab fa-github fa-lg fa-fw"></i>GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
+Make a [repo on <i class="fab fa-github fa-lg fa-fw"></i>GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1) 
+
+NO `README` + NO `.gitignore` (yet!)
 
 ---
 class:inverse, middle, center
