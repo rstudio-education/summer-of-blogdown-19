@@ -46,7 +46,7 @@ footnotereturnlinkcontents = "↩"
     weight = 8
 [[menu.main]]
     name = "Kelly Kapowski Demo"
-    url = "https://elastic-haibt-250d4e.netlify.com/"
+    url = "https://kellykapowski.netlify.com/"
     weight = 9
 
 [params]
