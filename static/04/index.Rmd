@@ -217,7 +217,7 @@ background-size: cover
 
 1. Update `baseurl` in your `config.toml`
 
-+ Commit/push `r emo::ji("right_arrow")` deploy!
+1. Commit/push `r emo::ji("right_arrow")` deploy!
 
 ---
 
@@ -259,7 +259,7 @@ Green means go!
 
 .pull-left[
 
-```{r echo = FALSE, highlight.output = c(3, 7, 8, 9, 10, 11, 14, 15, 18)}
+```{r echo = FALSE, highlight.output = c(3, 6, 7, 8, 9, 10, 11, 14, 15, 18)}
 fs::dir_tree(path = "/Users/alison/rscratch/kellykapowski", recurse = FALSE, all = TRUE)
 ```
 ]
