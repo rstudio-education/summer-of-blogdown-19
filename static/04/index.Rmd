@@ -217,11 +217,13 @@ background-size: cover
 
 1. Update `baseurl` in your `config.toml`
 
++ Commit/push `r emo::ji("right_arrow")` deploy!
+
 ---
 
 # Enforce HTTPS
 
-We'll follow [Yihui's advice](https://yihui.name/en/2017/11/301-redirect/#an-application-redirect-http-links-to-to-https) with Netlify redirects
+We'll follow [Yihui's advice](https://yihui.name/en/2017/11/301-redirect/#an-application-redirect-http-links-to-to-https) with Netlify redirects.
 
 + Put a file named `_redirects` into `static/`
 
