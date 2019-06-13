@@ -80,7 +80,7 @@ Here are some great Hugo learning materials I highly recommend for learning more
 
 + [An even better rOpenSci website with Hugo](https://ropensci.org/technotes/2019/01/09/hugo/)
 
-+ [A Blogdown New Post Workflow with Github and Netlify Mar 18 ](https://www.garrickadenbuie.com/blog/blogdown-netlify-new-post-workflow/)
++ [A Blogdown New Post Workflow with Github and Netlify ](https://www.garrickadenbuie.com/blog/blogdown-netlify-new-post-workflow/)
 
 + [Add Tags to Your Hugo Blog Using Taxonomies](https://www.jakewiesler.com/blog/hugo-taxonomies/)
 
