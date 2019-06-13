@@ -29,25 +29,17 @@ footnotereturnlinkcontents = "↩"
     url = "/people"
     weight = 4
 [[menu.main]]
-    name = "Chat"
-    url = "https://rstudio.slack.com/messages/summer-of-blogdown/"
-    weight = 5
-[[menu.main]]
     name = "Repo"
     url = "https://github.com/rstudio-education/summer-of-blogdown-19"
-    weight = 6
+    weight = 5
 [[menu.main]]
     name = "File an issue"
     url = "https://github.com/rstudio-education/summer-of-blogdown-19/issues/new"
     weight = 7
 [[menu.main]]
-    name = "Google Doc"
-    url = "https://docs.google.com/document/d/1Udr1ImgS-M8_c4qRRKG7eqJGs4_CXnBjM-WFBRXYTF0/edit?usp=sharing"
-    weight = 8
-[[menu.main]]
     name = "Kelly Kapowski Demo"
     url = "https://kellykapowski.netlify.com/"
-    weight = 9
+    weight = 8
 
 [params]
     description = "A week of blogdown for RStudio's summer 2019 interns."
