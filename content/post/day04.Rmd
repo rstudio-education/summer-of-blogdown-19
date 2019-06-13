@@ -1,8 +1,97 @@
 ---
 title: "Day 04"
-subtitle: "Maintaining it"
+subtitle: "The finishing touches"
 author: "Alison Hill"
 date: 2019-06-13T21:13:14-05:00
+publishdate: 2019-06-12T21:13:14-05:00
 ---
 
-not yet!
+
+# Slides <a href="/04" target="_blank">here</a>
+
+```{r echo = FALSE}
+knitr::include_url("https://summer-of-blogdown.netlify.com/04")
+```
+
+
+# Choose your own adventure(s)!
+
+Our week together is over, but here are ideas for putting the final finishing touches on your `blogdown` site:
+
+1. Set up custom archetypes for yourself! These are templates that your Hugo theme uses to pre-format new content. I wrote a [blog post](https://alison.rbind.io/post/2019-02-19-hugo-archetypes/) to get you started.
+
+1. Add your blog's feed to [RWeekly.org](https://rweekly.org/). In the academic theme, the full RSS is enabled by default. Don't be confused because [other themes don't do this](https://stackoverflow.com/a/49080861/9437012). All major RSS readers should automatically recognise the available feeds when you point the reader to your URLs. [Check it out yourself!](https://github.com/gcushen/hugo-academic/blob/master/layouts/_default/rss.xml) Note this text at the top:
+
+    ```
+    {{/* Generate RSS with full page content rather than just summary. */}}
+    ...
+    ```
+    
+    You can see the feeds are enabled in your site's `config.toml` file in this section:
+    
+    ```js
+    [outputs]
+      home = [ "HTML", "RSS", "JSON" ]
+      section = [ "HTML", "RSS" ]
+    ```
+    
+    To [submit a feed](https://rweekly.org/submit) for any given content section, use the following links:
+    
+    ```
+    All content: https://alison.rbind.io/index.xml
+    Post feed: https://alison.rbind.io/post/index.xml
+    Publication feed: https://alison.rbind.io/publication/index.xml
+    etc.
+    ```
+
+1. Enable `blogdown` to build *other* kinds of R Markdown output formats, for example, like `xaringan` slide decks, a `flexdashboard`, a `pagedown` CV/resume- any other single `.Rmd` file that you'd like to render within your site. Read up on this in the [book](https://bookdown.org/yihui/blogdown/static-files.html), and reference the [demo site](https://blogdown-demo.rbind.io/2017/09/06/adding-r-markdown-documents-of-other-output-formats/) for step-by-step instructions.
+
+1. Bling up your GitHub! 
+    + First, add your site's URL to the top of your repo
+    
+      ![](../assets/repo-1.png)
+  
+      ![](../assets/repo-2.png)
+  
+      ![](../assets/repo-3.png)
+    
+    + Add a `README.md` to your repo with a Netlify deployment badge [![Netlify Status](https://api.netlify.com/api/v1/badges/cac601bf-77e4-4d7f-b4ec-db2b08829e20/deploy-status)](https://app.netlify.com/sites/summer-of-blogdown/deploys). From [Netlify](https://www.netlify.com/blog/2019/01/29/sharing-the-love-with-netlify-deployment-badges/): " All you have to do is copy it from your site’s settings. The badge automatically updates to reflect the current state of your latest production deployment on Netlify. Clicking it takes you to the site’s deploy list if you’re authenticated, and to the login page otherwise."
+      
+      ![](https://www.netlify.com/img/blog/badges%20in%20ui@2x.png)
+      
+    + Add your URL to your GitHub profile: https://github.com/settings/profile.
+    
+    + Add your `blogdown` project repository to your pinned repos on GitHub: https://help.github.com/en/articles/pinning-items-to-your-profile.
+    
+    
+1. Want to work more on your bio? I love [these slides](https://docs.google.com/presentation/d/1pt8eXaGkFH8JTfOjcyvqt1n6DsUs5bSMuHy_NxepMfQ/edit?usp=sharing) from my former colleagues at OHSU, [Robin Champieux](https://twitter.com/rchampieux) and [Letisha Wyatt](https://twitter.com/dr_lrwyatt).
+
+Some highlights:
+
+  ![](../assets/bio-slide1.png)
+  
+  ![](../assets/bio-slide2.png)
+  
+  ![](../assets/bio-slide3.png)
+
+# Deeper Dives
+
+Here are some great Hugo learning materials I highly recommend for learning more:
+
++ [An even better rOpenSci website with Hugo](https://ropensci.org/technotes/2019/01/09/hugo/)
+
++ [A Blogdown New Post Workflow with Github and Netlify Mar 18 ](https://www.garrickadenbuie.com/blog/blogdown-netlify-new-post-workflow/)
+
++ [Add Tags to Your Hugo Blog Using Taxonomies](https://www.jakewiesler.com/blog/hugo-taxonomies/)
+
++ [Override a Hugo theme](https://zwbetz.com/override-a-hugo-theme/)
+
++ [Hugo's Directory Structure Explained](https://www.jakewiesler.com/blog/hugo-directory-structure/)
+
++ [Make a Hugo blog from scratch](https://zwbetz.com/make-a-hugo-blog-from-scratch/)
+
++ [Basically all of Mike Dane's tutorials](https://www.mikedane.com/static-site-generators/hugo/)
+
++ [Use Hugo templating in your external CSS](https://zwbetz.com/use-hugo-templating-in-your-external-css/)
+
++ [Hugo, the scope, the context and the dot](https://regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/)

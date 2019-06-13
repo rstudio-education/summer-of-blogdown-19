@@ -1,10 +1,66 @@
 ---
 title: "Day 04"
-subtitle: "Maintaining it"
+subtitle: "The finishing touches"
 author: "Alison Hill"
 date: 2019-06-13T21:13:14-05:00
+publishdate: 2019-06-12T21:13:14-05:00
 ---
 
 
 
-<p>not yet!</p>
+<div id="slides-here" class="section level1">
+<h1>Slides <a href="/04" target="_blank">here</a></h1>
+<iframe src="https://summer-of-blogdown.netlify.com/04" width="672" height="400px">
+</iframe>
+</div>
+<div id="choose-your-own-adventures" class="section level1">
+<h1>Choose your own adventure(s)!</h1>
+<p>Our week together is over, but here are ideas for putting the final finishing touches on your <code>blogdown</code> site:</p>
+<ol style="list-style-type: decimal">
+<li><p>Set up custom archetypes for yourself! These are templates that your Hugo theme uses to pre-format new content. I wrote a <a href="https://alison.rbind.io/post/2019-02-19-hugo-archetypes/">blog post</a> to get you started.</p></li>
+<li><p>Add your blog’s feed to <a href="https://rweekly.org/">RWeekly.org</a>. In the academic theme, the full RSS is enabled by default. Don’t be confused because <a href="https://stackoverflow.com/a/49080861/9437012">other themes don’t do this</a>. All major RSS readers should automatically recognise the available feeds when you point the reader to your URLs. <a href="https://github.com/gcushen/hugo-academic/blob/master/layouts/_default/rss.xml">Check it out yourself!</a> Note this text at the top:</p>
+<pre><code>{{/* Generate RSS with full page content rather than just summary. */}}
+...</code></pre>
+<p>You can see the feeds are enabled in your site’s <code>config.toml</code> file in this section:</p>
+<pre class="js"><code>[outputs]
+  home = [ &quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot; ]
+  section = [ &quot;HTML&quot;, &quot;RSS&quot; ]</code></pre>
+<p>To <a href="https://rweekly.org/submit">submit a feed</a> for any given content section, use the following links:</p>
+<pre><code>All content: https://alison.rbind.io/index.xml
+Post feed: https://alison.rbind.io/post/index.xml
+Publication feed: https://alison.rbind.io/publication/index.xml
+etc.</code></pre></li>
+<li><p>Enable <code>blogdown</code> to build <em>other</em> kinds of R Markdown output formats, for example, like <code>xaringan</code> slide decks, a <code>flexdashboard</code>, a <code>pagedown</code> CV/resume- any other single <code>.Rmd</code> file that you’d like to render within your site. Read up on this in the <a href="https://bookdown.org/yihui/blogdown/static-files.html">book</a>, and reference the <a href="https://blogdown-demo.rbind.io/2017/09/06/adding-r-markdown-documents-of-other-output-formats/">demo site</a> for step-by-step instructions.</p></li>
+<li>Bling up your GitHub!
+<ul>
+<li><p>First, add your site’s URL to the top of your repo</p>
+<p><img src="../assets/repo-1.png" /></p>
+<p><img src="../assets/repo-2.png" /></p>
+<p><img src="../assets/repo-3.png" /></p></li>
+<li><p>Add a <code>README.md</code> to your repo with a Netlify deployment badge <a href="https://app.netlify.com/sites/summer-of-blogdown/deploys"><img src="https://api.netlify.com/api/v1/badges/cac601bf-77e4-4d7f-b4ec-db2b08829e20/deploy-status" alt="Netlify Status" /></a>. From <a href="https://www.netlify.com/blog/2019/01/29/sharing-the-love-with-netlify-deployment-badges/">Netlify</a>: &quot; All you have to do is copy it from your site’s settings. The badge automatically updates to reflect the current state of your latest production deployment on Netlify. Clicking it takes you to the site’s deploy list if you’re authenticated, and to the login page otherwise.&quot;</p>
+<p><img src="https://www.netlify.com/img/blog/badges%20in%20ui@2x.png" /></p></li>
+<li><p>Add your URL to your GitHub profile: <a href="https://github.com/settings/profile" class="uri">https://github.com/settings/profile</a>.</p></li>
+<li><p>Add your <code>blogdown</code> project repository to your pinned repos on GitHub: <a href="https://help.github.com/en/articles/pinning-items-to-your-profile" class="uri">https://help.github.com/en/articles/pinning-items-to-your-profile</a>.</p></li>
+</ul></li>
+<li><p>Want to work more on your bio? I love <a href="https://docs.google.com/presentation/d/1pt8eXaGkFH8JTfOjcyvqt1n6DsUs5bSMuHy_NxepMfQ/edit?usp=sharing">these slides</a> from my former colleagues at OHSU, <a href="https://twitter.com/rchampieux">Robin Champieux</a> and <a href="https://twitter.com/dr_lrwyatt">Letisha Wyatt</a>.</p></li>
+</ol>
+<p>Some highlights:</p>
+<p><img src="../assets/bio-slide1.png" /></p>
+<p><img src="../assets/bio-slide2.png" /></p>
+<p><img src="../assets/bio-slide3.png" /></p>
+</div>
+<div id="deeper-dives" class="section level1">
+<h1>Deeper Dives</h1>
+<p>Here are some great Hugo learning materials I highly recommend for learning more:</p>
+<ul>
+<li><p><a href="https://ropensci.org/technotes/2019/01/09/hugo/">An even better rOpenSci website with Hugo</a></p></li>
+<li><p><a href="https://www.garrickadenbuie.com/blog/blogdown-netlify-new-post-workflow/">A Blogdown New Post Workflow with Github and Netlify Mar 18</a></p></li>
+<li><p><a href="https://www.jakewiesler.com/blog/hugo-taxonomies/">Add Tags to Your Hugo Blog Using Taxonomies</a></p></li>
+<li><p><a href="https://zwbetz.com/override-a-hugo-theme/">Override a Hugo theme</a></p></li>
+<li><p><a href="https://www.jakewiesler.com/blog/hugo-directory-structure/">Hugo’s Directory Structure Explained</a></p></li>
+<li><p><a href="https://zwbetz.com/make-a-hugo-blog-from-scratch/">Make a Hugo blog from scratch</a></p></li>
+<li><p><a href="https://www.mikedane.com/static-site-generators/hugo/">Basically all of Mike Dane’s tutorials</a></p></li>
+<li><p><a href="https://zwbetz.com/use-hugo-templating-in-your-external-css/">Use Hugo templating in your external CSS</a></p></li>
+<li><p><a href="https://regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/">Hugo, the scope, the context and the dot</a></p></li>
+</ul>
+</div>

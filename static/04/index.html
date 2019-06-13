@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Summer of Blogdown</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alison Hill" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/my-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide, top, left
+background-image: url(../assets/sasha-stories-259980-unsplash.jpg)
+background-size: cover
+
+&lt;div class="module mid"&gt;
+  &lt;h4&gt;day 04&lt;/h2&gt;
+&lt;/div&gt;
+
+# Summer of Blogdown
+
+### Alison Hill
+
+
+
+.footnote[
+&lt;img src="../assets/RStudio-Logo-White.png" alt="rstudio" style="float:left;width:150px;"/&gt;
+]
+
+---
+name: hello
+class: inverse, right, middle
+
+
+&lt;img style="border-radius: 50%;" src="https://github.com/apreshill.png" width="150px"/&gt;
+
+# Find me at...
+
+[<i class="fab  fa-twitter "></i> @apreshill](http://twitter.com/apreshill)  
+[<i class="fab  fa-github "></i> @apreshill](http://github.com/apreshill)  
+[<i class="fas  fa-link "></i> alison.rbind.io](https://alison.rbind.io)  
+[<i class="fas  fa-paper-plane "></i> alison@rstudio.com](mailto:alison@rstudio.com)
+
+
+---
+class: middle, inverse
+
+# Day 01 review
+
+
+
++ Discussed `blogdown` selling points 💡
+
+
++ Got to know our Hugo installation 👋
+
+
+
++ Used Hugo to build a website in RStudio 💪
+
+
+
++ Deployed a website using Netlify 🚀
+
+
+
++ Learned that all Hugo themes are GitHub repositories 🤷‍♀
+
+
+
++ Learned that when you serve site, R + Hugo = 💫 -&gt; `public/` (❌ TOUCH!)
+
+
+
++ Alison mused about the false lure of Hugo theme "simplicity" 🧘‍♂️
+
+
+---
+class: middle, inverse
+
+# Day 02 review
+
++ Used version control via GitHub
+
++ Used continuous deployment via Netlify
+
++ Personalized your `about.md` page (social links, bio, interests, education)
+
++ Practiced making changes, serving site, push to GitHub, + 💥 deploy
+
++ Learned a bit about Hugo `content/` ➡️ sections ➡️ pages
+
++ Learned a bit about TOML vs YAML 🍠
+
++ Played with turning widgets on and off a la Mr. Potato Head 🥔
+
+---
+class: middle, inverse
+
+# Day 03 review
+
+--
+
++ Linked from within your site to other parts of your site using *relative links*
+
+--
+
++ Embedded images into content using *relative links*
+
+--
+
++ Setup blogdown project options via an `.Rprofile` file 💅
+
+--
+
++ Created new bundled content 🍱
+
+--
+
++ Configured site `permalinks` ([docs](https://gohugo.io/content-management/urls/#permalinks-configuration-example)) 🔗
+
+--
+
++ Used data and R (finally!) 📈
+
+---
+background-image: url(../assets/damian-patkowski-1295838-unsplash.jpg)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/1.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/2.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/3.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/4.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/5.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/6.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/7.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/8.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/9.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/10.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/11.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/12.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/13.png)
+background-size: cover
+
+---
+class: middle, center, inverse
+
+# Now let's update our home's address
+
+First, Netlify
+
+Next (if you want) on [rbind.io](https://github.com/rbind/support/issues) (use the issue template)
+
+---
+
+# Enforce HTTPS
+
+We'll follow [Yihui's advice](https://yihui.name/en/2017/11/301-redirect/#an-application-redirect-http-links-to-to-https) with Netlify redirects
+
+---
+
+# A few more Hugo tidbits
+
++ Overriding versus editing (example: [view source in metadata](https://github.com/rbind/apreshill/commit/8933c35cee33d03597b310d6db75474837af1261))
+
++ What not to touch
+
++ Dates (get to know: `publishdate`)
+
++ Drafts 
+
++ [Alias urls](https://gohugo.io/content-management/urls/#aliases)
+
++ [General troubleshooting advice](https://alison.rbind.io/post/2019-03-04-hugo-troubleshooting/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"slideNumberFormat": "",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

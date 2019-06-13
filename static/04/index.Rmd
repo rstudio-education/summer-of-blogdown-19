@@ -1,0 +1,229 @@
+---
+title: "Summer of Blogdown"
+subtitle: "day 04"
+author: Alison Hill
+output:
+  xaringan::moon_reader:
+    css: ["default", "../assets/my-theme.css", "../assets/my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "https://platform.twitter.com/widgets.js"
+    includes:
+      in_header: header.html  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
+  comment = NA, dpi = 300)
+library(magick)
+library(tidyverse)
+library(countdown)
+```
+
+class: title-slide, top, left
+background-image: url(../assets/sasha-stories-259980-unsplash.jpg)
+background-size: cover
+
+<div class="module mid">
+  <h4>`r rmarkdown::metadata$subtitle`</h2>
+</div>
+
+# `r rmarkdown::metadata$title`
+
+### `r rmarkdown::metadata$author`
+
+
+
+.footnote[
+<img src="../assets/RStudio-Logo-White.png" alt="rstudio" style="float:left;width:150px;"/>
+]
+
+---
+name: hello
+class: inverse, right, middle
+
+
+<img style="border-radius: 50%;" src="https://github.com/apreshill.png" width="150px"/>
+
+# Find me at...
+
+[`r icon::fa("twitter")` @apreshill](http://twitter.com/apreshill)  
+[`r icon::fa("github")` @apreshill](http://github.com/apreshill)  
+[`r icon::fa("link")` alison.rbind.io](https://alison.rbind.io)  
+[`r icon::fa("paper-plane")` alison@rstudio.com](mailto:alison@rstudio.com)
+
+
+---
+class: middle, inverse
+
+# Day 01 review
+
+
+
++ Discussed `blogdown` selling points `r emo::ji("bulb")`
+
+
++ Got to know our Hugo installation `r emo::ji("wave")`
+
+
+
++ Used Hugo to build a website in RStudio `r emo::ji("strong")`
+
+
+
++ Deployed a website using Netlify `r emo::ji("rocket")`
+
+
+
++ Learned that all Hugo themes are GitHub repositories `r emo::ji("woman_shrugging")`
+
+
+
++ Learned that when you serve site, R + Hugo = `r emo::ji("dizzy")` -> `public/` (`r emo::ji("x")` TOUCH!)
+
+
+
++ Alison mused about the false lure of Hugo theme "simplicity" `r emo::ji("yoga")`
+
+
+---
+class: middle, inverse
+
+# Day 02 review
+
++ Used version control via GitHub
+
++ Used continuous deployment via Netlify
+
++ Personalized your `about.md` page (social links, bio, interests, education)
+
++ Practiced making changes, serving site, push to GitHub, + `r emo::ji("boom")` deploy
+
++ Learned a bit about Hugo `content/` `r emo::ji("right_arrow")` sections `r emo::ji("right_arrow")` pages
+
++ Learned a bit about TOML vs YAML `r emo::ji("sweet_potato")`
+
++ Played with turning widgets on and off a la Mr. Potato Head `r emo::ji("potato")`
+
+---
+class: middle, inverse
+
+# Day 03 review
+
+--
+
++ Linked from within your site to other parts of your site using *relative links*
+
+--
+
++ Embedded images into content using *relative links*
+
+--
+
++ Setup blogdown project options via an `.Rprofile` file `r emo::ji("polish")`
+
+--
+
++ Created new bundled content `r emo::ji("bento")`
+
+--
+
++ Configured site `permalinks` ([docs](https://gohugo.io/content-management/urls/#permalinks-configuration-example)) `r emo::ji("link")`
+
+--
+
++ Used data and R (finally!) `r emo::ji("graph")`
+
+---
+background-image: url(../assets/damian-patkowski-1295838-unsplash.jpg)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/1.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/2.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/3.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/4.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/5.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/6.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/7.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/8.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/9.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/10.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/11.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/12.png)
+background-size: cover
+
+---
+background-image: url(../assets/hugo/13.png)
+background-size: cover
+
+---
+class: middle, center, inverse
+
+# Now let's update our home's address
+
+First, Netlify
+
+Next (if you want) on [rbind.io](https://github.com/rbind/support/issues) (use the issue template)
+
+---
+
+# Enforce HTTPS
+
+We'll follow [Yihui's advice](https://yihui.name/en/2017/11/301-redirect/#an-application-redirect-http-links-to-to-https) with Netlify redirects
+
+---
+
+# A few more Hugo tidbits
+
++ Overriding versus editing (example: [view source in metadata](https://github.com/rbind/apreshill/commit/8933c35cee33d03597b310d6db75474837af1261))
+
++ What not to touch
+
++ Dates (get to know: `publishdate`)
+
++ Drafts 
+
++ [Alias urls](https://gohugo.io/content-management/urls/#aliases)
+
++ [General troubleshooting advice](https://alison.rbind.io/post/2019-03-04-hugo-troubleshooting/)
