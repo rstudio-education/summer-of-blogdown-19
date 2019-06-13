@@ -50,6 +50,23 @@ knitr::include_url("https://summer-of-blogdown.netlify.com/03")
 Try out *any* [`bookdown` components](https://bookdown.org/yihui/bookdown/components.html) within `blogdown` like: 
 
 + [citations](https://blogdown-demo.rbind.io/2017/08/28/adding-citations-to-posts/), 
-+ [HTML widgets](https://blogdown-demo.rbind.io/2017/09/07/adding-htmlwidgets-to-r-markdown-posts/)
-+ [figures with a caption](https://blogdown-demo.rbind.io/2017/10/06/adding-figures-and-other-images-to-posts/)
-+ [cross-references](https://bookdown.org/yihui/bookdown/cross-references.html)
++ [HTML widgets](https://blogdown-demo.rbind.io/2017/09/07/adding-htmlwidgets-to-r-markdown-posts/),
++ [figures with a caption](https://blogdown-demo.rbind.io/2017/10/06/adding-figures-and-other-images-to-posts/), or
++ [cross-references](https://bookdown.org/yihui/bookdown/cross-references.html).
+
+# Review
+
++ Linked from within your site to other parts of your site using *relative links*
+
++ Embedded images into content using *relative links*
+
++ Setup blogdown project options via an `.Rprofile` file `r emo::ji("polish")`
+
++ Created a new bundled content `r emo::ji("bento")`
+
++ Configured site `permalinks` ([docs](https://gohugo.io/content-management/urls/#permalinks-configuration-example)) `r emo::ji("link")`
+
++ Used data and R (finally!) `r emo::ji("graph")`
+
+
+
