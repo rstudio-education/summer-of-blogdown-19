@@ -196,21 +196,42 @@ background-size: cover
 ---
 background-image: url(../assets/hugo/13.png)
 background-size: cover
+class: inverse, middle, center
+
+# Your home page
 
 ---
-class: middle, center, inverse
+class: bottom, center, inverse
+background-image: url(../assets/house-number-446044_1920.jpg)
+background-size: cover
 
 # Now let's update our home's address
 
-First, Netlify
+---
 
-Next (if you want) on [rbind.io](https://github.com/rbind/support/issues) (use the issue template)
+# Update our URL
+
+1. On Netlify
+
+1. Next (if you want) on [rbind.io](https://github.com/rbind/support/issues) (use the issue template)
+
+1. Update `baseurl` in your `config.toml`
 
 ---
 
 # Enforce HTTPS
 
 We'll follow [Yihui's advice](https://yihui.name/en/2017/11/301-redirect/#an-application-redirect-http-links-to-to-https) with Netlify redirects
+
++ Put a file named `_redirects` into `static/`
+
++ Content:
+
+  ```
+  http://alison.rbind.io/*    https://alison.rbind.io/:splat  301!
+  ```
+  
++ Commit/push `r emo::ji("right_arrow")` deploy!
 
 ---
 
@@ -227,3 +248,21 @@ We'll follow [Yihui's advice](https://yihui.name/en/2017/11/301-redirect/#an-app
 + [Alias urls](https://gohugo.io/content-management/urls/#aliases)
 
 + [General troubleshooting advice](https://alison.rbind.io/post/2019-03-04-hugo-troubleshooting/)
+
+---
+
+# What to touch
+
+Green means go!
+
+.pull-left[
+
+```{r echo = FALSE, highlight.output = c(3, 7, 8, 9, 10, 11, 14, 15, 18)}
+fs::dir_tree(path = "/Users/alison/rscratch/kellykapowski", recurse = FALSE, all = TRUE)
+```
+]
+
+.pull-right[
+All of your `themes` folder can be overriden by files in your project root: [read more here](https://zwbetz.com/override-a-hugo-theme/)
+
+]
