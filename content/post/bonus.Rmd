@@ -1,0 +1,68 @@
+---
+title: "Bonus"
+subtitle: "Good ideas `r emo::ji('thumbs_up')`"
+author: "Alison Hill"
+date: 2019-06-13T21:13:14-05:00
+publishdate: 2019-06-12T21:13:14-05:00
+---
+
+Here is a collection of "good ideas", brought on by a Q&A session after we finished our fourth day of "Summer of `blogdown`". A mix of advice regarding professional development, good practices, and finding your voice `r emo::ji("mega")`.
+
+# License {#license}
+
+Add a site `LICENSE.md` and use [CC-BY](http://creativecommons.org/licenses/by/4.0/legalcode) for the license, and 
+
+  + Here is [Greg's license](https://github.com/gvwilson/thirdbit/blob/master/LICENSE)
+  + Alison (using the Hugo academic theme) changed `privacy.md` to [`license.md`](https://github.com/rbind/apreshill/blob/master/content/license.md), so you can view my site license [here](https://alison.rbind.io/license/).
+  
+  ![](../assets/alison-license.png)
+
+# Citation
+ 
+Add a site `CITATION.md` in your project root directory- make sure you include plain text, BibTeX, and your [ORCID](https://orcid.org/) in `CITATION.md`, and every librarian on the planet will be your new best friend. -- [Greg Wilson](https://twitter.com/gvwilson)
+  
+  + In your academic-themed site, an [ORCID](https://orcid.org/) logo/link is one of the social icons available to you "out of the box" with the [academicons](https://jpswalsh.github.io/academicons/) pack (see commit here on [Kelly's site)](https://github.com/apreshill/kellykapowski/commit/e9ff46f2bb66375519a40dc0d8ba58166546fb4d):
+    
+  ```yaml
+  - icon: orcid
+    icon_pack: ai
+    link: https://orcid.org
+  ```
+
+# Bling up your Github!
+
+1. First, add your site's URL to the top of your repo:
+    
+      ![](../assets/repo-1.png)
+  
+      ![](../assets/repo-2.png)
+  
+      ![](../assets/repo-3.png)
+    
+1. Add a `README.md` to your repo with a Netlify deployment badge [![Netlify Status](https://api.netlify.com/api/v1/badges/cac601bf-77e4-4d7f-b4ec-db2b08829e20/deploy-status)](https://app.netlify.com/sites/summer-of-blogdown/deploys). From [Netlify](https://www.netlify.com/blog/2019/01/29/sharing-the-love-with-netlify-deployment-badges/): " All you have to do is copy it from your site’s settings. The badge automatically updates to reflect the current state of your latest production deployment on Netlify. Clicking it takes you to the site’s deploy list if you’re authenticated, and to the login page otherwise."
+      
+      ![](https://www.netlify.com/img/blog/badges%20in%20ui@2x.png)
+      
+1. Add your URL to your GitHub profile: https://github.com/settings/profile.
+    
+1. Add your `blogdown` project repository to your pinned repos on GitHub: https://help.github.com/en/articles/pinning-items-to-your-profile.
+    
+# Biography    
+
+Want to work more on your bio? I love [these slides](https://docs.google.com/presentation/d/1pt8eXaGkFH8JTfOjcyvqt1n6DsUs5bSMuHy_NxepMfQ/edit?usp=sharing) from my former colleagues at OHSU, [Robin Champieux](https://twitter.com/rchampieux) and [Letisha Wyatt](https://twitter.com/dr_lrwyatt). Materials are adapted from [this blog post](https://www.altmetric.com/blog/building-your-online-reputation/).
+
+Some highlights:
+
+  ![](../assets/bio-slide1.png)
+  
+  ![](../assets/bio-slide2.png)
+  
+  ![](../assets/bio-slide3.png)
+  
+# On writing
+
+Want to work on your writing? A few good resources:
+
++ [Dreyer's English: An Utterly Correct Guide to Clarity and Style](https://www.amazon.com/Dreyers-English-Utterly-Correct-Clarity/dp/0812995708)
+
++ [The Elements of Style](https://www.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X)
