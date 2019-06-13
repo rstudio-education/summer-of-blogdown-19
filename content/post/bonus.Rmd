@@ -28,6 +28,19 @@ Add a site `CITATION.md` in your project root directory- make sure you include p
     icon_pack: ai
     link: https://orcid.org
   ```
+  
+# Commit histories
+
+At this point, you may be worried about other people viewing your commit history. I wouldn't worry about this too much, but here are some good resources that can help alleviate your anxiety and perhaps help you learn more about using Git/GitHub:
+
+```{r echo = FALSE, fig.cap="Art by Vicki Drake from https://victoria.dev/"}
+knitr::include_graphics("https://victoria.dev/verbose/git-commit-practices-your-future-self-will-thank-you-for/cover_git-commit-art.png")
+```
+
+
++ This [blog post](https://victoria.dev/verbose/git-commit-practices-your-future-self-will-thank-you-for/) on "Git commit practices your future self will thank you for" by [Vicki Drake](https://victoria.dev/).
+
++ ["The Repeated Amend"](https://happygitwithr.com/repeated-amend.html) from [Happy Git with R](https://happygitwithr.com/) by [Jenny Bryan](https://jennybryan.org/).
 
 # Bling up your Github!
 
