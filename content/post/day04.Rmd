@@ -14,7 +14,7 @@ knitr::include_url("https://summer-of-blogdown.netlify.com/04")
 ```
 
 
-# Choose your own adventure(s)!
+# Choose your own adventure(s)! {#going-farther}
 
 Our week together is over, but here are ideas for putting the final finishing touches on your `blogdown` site:
 
@@ -35,7 +35,7 @@ Our week together is over, but here are ideas for putting the final finishing to
       section = [ "HTML", "RSS" ]
     ```
     
-    To [submit a feed](https://rweekly.org/submit) for any given content section, use the following links:
+    To [submit a feed](https://rweekly.org/submit) for any given content section, use the following link format:
     
     ```
     All content: https://alison.rbind.io/index.xml
