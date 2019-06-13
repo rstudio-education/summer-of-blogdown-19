@@ -44,35 +44,10 @@ Our week together is over, but here are ideas for putting the final finishing to
     etc.
     ```
 
-1. Enable `blogdown` to build *other* kinds of R Markdown output formats, for example, like [`xaringan`](https://bookdown.org/yihui/rmarkdown/xaringan.html) slides, a [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/), a [`pagedown` CV/resume](https://pagedown.rbind.io/)- any other single `.Rmd` file that you'd like to render within your site. Read up on this in the [book](https://bookdown.org/yihui/blogdown/static-files.html), and reference the [demo site](https://blogdown-demo.rbind.io/2017/09/06/adding-r-markdown-documents-of-other-output-formats/) for step-by-step instructions.
+1. Enable `blogdown` to build *other* kinds of R Markdown output formats from your `static/` directory, for example, like [`xaringan`](https://bookdown.org/yihui/rmarkdown/xaringan.html) slides, a [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/), a [`pagedown` CV/resume](https://pagedown.rbind.io/)- any other single `.Rmd` file that you'd like to render within your site. Read up on this in the [book](https://bookdown.org/yihui/blogdown/static-files.html), and reference the [demo site](https://blogdown-demo.rbind.io/2017/09/06/adding-r-markdown-documents-of-other-output-formats/) for step-by-step instructions.
 
-1. Bling up your GitHub! 
-    + First, add your site's URL to the top of your repo
-    
-      ![](../assets/repo-1.png)
-  
-      ![](../assets/repo-2.png)
-  
-      ![](../assets/repo-3.png)
-    
-    + Add a `README.md` to your repo with a Netlify deployment badge [![Netlify Status](https://api.netlify.com/api/v1/badges/cac601bf-77e4-4d7f-b4ec-db2b08829e20/deploy-status)](https://app.netlify.com/sites/summer-of-blogdown/deploys). From [Netlify](https://www.netlify.com/blog/2019/01/29/sharing-the-love-with-netlify-deployment-badges/): " All you have to do is copy it from your site’s settings. The badge automatically updates to reflect the current state of your latest production deployment on Netlify. Clicking it takes you to the site’s deploy list if you’re authenticated, and to the login page otherwise."
-      
-      ![](https://www.netlify.com/img/blog/badges%20in%20ui@2x.png)
-      
-    + Add your URL to your GitHub profile: https://github.com/settings/profile.
-    
-    + Add your `blogdown` project repository to your pinned repos on GitHub: https://help.github.com/en/articles/pinning-items-to-your-profile.
-    
-    
-1. Want to work more on your bio? I love [these slides](https://docs.google.com/presentation/d/1pt8eXaGkFH8JTfOjcyvqt1n6DsUs5bSMuHy_NxepMfQ/edit?usp=sharing) from my former colleagues at OHSU, [Robin Champieux](https://twitter.com/rchampieux) and [Letisha Wyatt](https://twitter.com/dr_lrwyatt). Materials are adapted from [this blog post](https://www.altmetric.com/blog/building-your-online-reputation/).
+1. Once your site is "live", you'll want to work incognito `r emo::ji("closed_lock_with_key")`. Try drafting content in GitHub branches as described in [this blog post](https://www.garrickadenbuie.com/blog/blogdown-netlify-new-post-workflow/#workflow). You already have the wiring setup in your [`netlify.toml`](https://github.com/apreshill/kellykapowski/blob/master/netlify.toml) to enable branch deploys, so try it out! Make a branch, commit/push, and go to your Netlify deploy logs to see the link.
 
-Some highlights:
-
-  ![](../assets/bio-slide1.png)
-  
-  ![](../assets/bio-slide2.png)
-  
-  ![](../assets/bio-slide3.png)
 
 # Deeper Dives
 
