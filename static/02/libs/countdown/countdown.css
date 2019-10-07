@@ -3,6 +3,7 @@
   position: absolute;
   cursor: pointer;
   font-size: 3em;
+  line-height: 1.2;
   border-color: #ddd;
   border-width: 3px;
   border-style: solid;
@@ -14,22 +15,32 @@
   padding: 0 15px;
   text-align: center;
 }
-.countdown .digits {
+code.countdown-time {
+  vertical-align: middle;
+}
+.countdown-digits {
   color: inherit;
 }
 .countdown.running {
   border-color: #3C9A5F;
-  background-color: #43ac6a;
+  background-color: #43AC6A;
 }
-.countdown.running .digits {
-  color: #000000;
+.countdown.running .countdown-digits {
+  color: #102B1A;
 }
 .countdown.finished {
   border-color: #D83A20;
   background-color: #F04124;
 }
-.countdown.finished .digits {
-  color: #000000;
+.countdown.finished .countdown-digits {
+  color: #3C1009;
+}
+.countdown.running.warning {
+  border-color: #CFAE24;
+  background-color: #E6C229;
+}
+.countdown.running.warning .countdown-digits {
+  color: #39300A;
 }
 
 @-webkit-keyframes blink {
@@ -44,7 +55,7 @@
 	to   {opacity: 1}
 }
 
-.countdown.running.blink-colon .digits.colon{
+.countdown.running.blink-colon .countdown-digits.colon {
   -webkit-animation: blink 2s steps(1, end) 0s infinite;
           animation: blink 2s steps(1, end) 0s infinite;
 }

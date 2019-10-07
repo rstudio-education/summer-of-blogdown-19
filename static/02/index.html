@@ -83,7 +83,7 @@ class: middle, inverse
 
 --
 
-+ Alison mused about the false lure of Hugo theme "simplicity" 🧘‍♀️
++ Alison mused about the false lure of Hugo theme "simplicity" 🧘‍♂️
 
 
 ---
@@ -225,6 +225,9 @@ Open, then copy &amp; paste:
   
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.55.6"
+  
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.55.6"
 ```
 
 
@@ -323,8 +326,9 @@ class: middle, center, inverse
 
 
 ```
-/Users/alison/rscratch/kellykapowski
+/Users/alison/rsites/kellykapowski
 ├── .DS_Store
+├── .Rprofile
 ├── .Rproj.user
 ├── .git
 ├── .gitignore
@@ -350,14 +354,15 @@ class: middle, center, inverse
 .pull-left[
 
 ```
-/Users/alison/rscratch/kellykapowski
+/Users/alison/rsites/kellykapowski
 ├── .DS_Store
+├── .Rprofile
 ├── .Rproj.user
 ├── .git
 ├── .gitignore
 ├── archetypes
-├── config
-*├── config.toml
+*├── config
+├── config.toml
 ├── content
 ├── data
 ├── index.Rmd
@@ -374,7 +379,7 @@ class: middle, center, inverse
 .pull-right[
 
 ```
-/Users/alison/rscratch/kellykapowski/content
+/Users/alison/rsites/kellykapowski/content
 ├── .DS_Store
 ├── authors
 ├── book
@@ -384,7 +389,8 @@ class: middle, center, inverse
 ├── privacy.md
 ├── publication
 ├── slides
-└── talk
+├── talk
+└── thebell
 ```
 
 
@@ -422,8 +428,8 @@ class: middle, center, inverse
 
 Pick any folder *other than in the `home` folder*- edit content and see what changes via **LiveReload**
 
-<div class="countdown" id="timer_5d00691c" style="right:0;bottom:0;" data-audio="true">
-<code><span class="digits minutes">05</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+<div class="countdown" id="timer_5d9b8f19" style="right:0;bottom:0;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 
@@ -443,7 +449,7 @@ In the academic theme, these are *widgets*:
 
 
 ```
-/Users/alison/rscratch/kellykapowski/content/home
+/Users/alison/rsites/kellykapowski/content/home
 ├── .DS_Store
 ├── about.md
 ├── accomplishments.md
@@ -483,8 +489,8 @@ Pick your widgets- I suggest leaving them all in place but setting `active = FAL
 
 If you delete, they are always in: `themes/hugo-academic/exampleSite/content/home`
 
-<div class="countdown" id="timer_5d006a79" style="right:0;bottom:0;" data-audio="true">
-<code><span class="digits minutes">05</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+<div class="countdown" id="timer_5d9b8f9f" style="right:0;bottom:0;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 
