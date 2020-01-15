@@ -169,7 +169,7 @@ class: middle, inverse, center
 
 ![](../assets/netlify-dropped.png)
 
-https://elastic-haibt-250d4e.netlify.com
+https://kellykapowski.netlify.com/
 
 
 ---
@@ -197,7 +197,7 @@ class: middle, inverse, center
 knitr::include_graphics("../assets/hello-kelly.png")
 ```
 
-https://elastic-haibt-250d4e.netlify.com
+https://kellykapowski.netlify.com/
 
 ---
 class: inverse, middle, center
@@ -310,7 +310,7 @@ class: inverse, middle, center
 
 ![](https://media.giphy.com/media/3kwdkOihSMl7JCi37m/giphy.gif)
 
-https://app.netlify.com/sites/elastic-haibt-250d4e/deploys
+https://app.netlify.com/sites/kellykapowski/deploys
 
 ---
 class: middle, inverse, center
